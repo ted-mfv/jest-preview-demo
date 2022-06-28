@@ -1,0 +1,138 @@
+// for join-companies
+
+.join-company-new{
+  .default-dropdown {
+    min-width: 280px !important;
+    max-width: 280px !important;
+
+    label, span, button {
+      font-size: $font-size-base;
+    }
+  }
+
+  .panel {
+    .panel-heading {
+      padding: 12px;
+    }
+  }
+
+  .panel + .panel {
+    margin-top: 32px;
+  }
+
+  .dropdown {
+    width: 100% !important;
+
+    .btn {
+      height: 32px;
+    }
+  }
+}
+
+.application-forms {
+  dl {
+    dt {
+      min-width: 84px;
+    }
+  }
+
+  table {
+    .datepicker, .default-dropdown {
+      margin: 0;
+    }
+
+    .datepicker {
+      min-width: 120px;
+      max-width: 120px;
+
+      .mt-1 {
+        margin: 0 !important;
+      }
+    }
+
+    .default-dropdown {
+      min-width: 100px;
+      max-width: 100px;
+
+      .dropdown {
+        margin: 0 !important;
+      }
+    }
+
+    tr {
+      td:not(:first-child) {
+        width: max-content;
+      }
+    }
+  }
+
+  .alert {
+    &.w-788 {
+      margin-left: 0 !important;
+      margin-bottom: 16px !important;
+      min-width: 0 !important;
+    }
+  }
+}
+
+
+.join-company-edit,
+.join-company-confirm {
+  // TODO: After completing update aggregating logic for ALL procedure
+  // HelpAggregateButton at src/components/common/GroupBlock.jsx can be removed
+  // and below rule should be removed too.
+  .group-block {
+    svg {
+      display: none;
+    }
+  }
+
+  .foreigner-section {
+    .panel-body {
+     > div:first-child{
+        background: #fafafa;
+
+        p + p {
+          margin-top: 0.5em;
+        }
+      }
+    }
+
+    .residential_status_note {
+      padding-top: 0;
+
+      .control-label  {
+        visibility: hidden;
+      }
+    }
+
+    .residential_status,
+    .residential_status_note,
+    .valid_residential_period {
+      border-bottom: none;
+    }
+
+    .valid_residential_period.form-group {
+      border-top: solid 1px #d4d8dd;
+    }
+  }
+}
+
+.join-company-confirm {
+  span.value {
+    ul.list-unstyled {
+      &:empty, li:empty {
+        &:before {
+          content: "-"
+        }
+      }
+    }
+  }
+
+  .foreigner-section {
+    .residential_status_note {
+      margin-top: -1.2em;
+      padding-top: 0;
+    }
+  }
+}

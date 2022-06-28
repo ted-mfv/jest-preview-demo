@@ -1,0 +1,21 @@
+.type-ahead {
+  @extend .datepicker;
+
+  input.form-control {
+    width: 100%;
+    padding: 1px 1px 1px 8px;
+
+    &:focus {
+      box-shadow: none;
+      border-color: $gray-400;
+    }
+  }
+
+  a.dropdown-item {
+    color: $gray !important;
+    &:hover {
+      text-decoration: none !important;
+    }
+  }
+
+}

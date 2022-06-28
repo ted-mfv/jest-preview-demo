@@ -1,0 +1,33 @@
+.custom-table {
+  &--users {
+    .tbl-col-3,
+    .tbl-col-4 {
+      width: percentage(180/988);
+    }
+
+    .tbl-col-2 {
+      width: percentage(360/988);
+    }
+  }
+}
+
+.invite-user {
+  .info-value {
+    .dropdown {
+      input {
+        min-width: 0;
+      }
+    }
+
+    .default-dropdown  {
+      width: auto;
+      max-width: percentage(1);
+      display: inline-block;
+
+      .dropdown-toggle {
+        padding-right: 25px;
+      }
+    }
+  }
+}
+

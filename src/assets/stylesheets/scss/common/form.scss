@@ -1,0 +1,76 @@
+.form {
+  &.form-search {
+    div.row {
+      > div {
+        min-width: calc((100% - 70px)/5);
+        max-width: calc((100% - 70px)/5);
+        margin-right: 12px;
+        margin-bottom: 16px;
+      }
+    }
+
+    .date-picker {
+      label[for] {
+        display: inline-block;
+        margin: 0;
+
+        & + div {
+          @extend .mt-1;
+          position: relative;
+        }
+      }
+
+      .DateInput {
+        height: 28px;
+        input::placeholder {
+          transform: translateY(-5%);
+        }
+        ::-webkit-input-placeholder {
+          transform: translateY(-5%);
+        }
+        ::-moz-placeholder {
+          transform: translateY(-5%);
+        }
+        :-ms-input-placeholder {
+          transform: translateY(-5%);
+        }
+        :-moz-placeholder {
+          transform: translateY(-5%);
+        }
+
+      }
+    }
+
+    .default-input {
+      label {
+        margin-bottom: 0;
+      }
+
+      .form-control {
+        width: 100%;
+        padding: 1px 1px 1px 8px;
+        font-size: 14px;
+        height: 28px;
+        margin-top: 4px;
+        border-color: #c5cbcf;
+      }
+    }
+
+    .form-check {
+      .form-check-label {
+        font-size: 14px;
+        line-height: 21px;
+      }
+    }
+  }
+}
+
+.form-group.have-input-with-title {
+  .default-input {
+    display: flex;
+    width: fit-content;
+    > label {
+      margin-right: 4px;
+    }
+  }
+}

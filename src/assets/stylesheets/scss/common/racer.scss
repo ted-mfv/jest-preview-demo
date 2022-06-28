@@ -1,0 +1,35 @@
+.racer {
+  table-layout: fixed;
+  width: 100%;
+
+  .racer-download, .progress-group {
+    min-height: 32px;
+  }
+
+  .progress-group + .racer-download {
+    border-left: 1px solid $border-color-sub;
+  }
+
+  .racer-download {
+    display: flex;
+    align-items: center;
+  }
+
+  .failed {
+    font-size: 12px;
+  }
+}
+
+table.racer {
+  tr:last-child {
+    td:first-child {
+      border-bottom-left-radius: 4px;
+    }
+  }
+
+  tr {
+    th {
+      text-align: center;
+    }
+  }
+}

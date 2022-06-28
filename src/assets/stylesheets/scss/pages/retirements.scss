@@ -1,0 +1,520 @@
+.retirement {
+  @extend .w-788;
+
+  .panel {
+    width: 100%;
+  }
+
+  .panel + .panel, .form, form {
+    @extend .mt-3;
+  }
+
+  .width-1126 {
+    @extend .width-1126;
+  }
+}
+
+.retirement-edit {
+  .form-inline .date-picker {
+    display: flex;
+    flex-wrap: nowrap;
+    &:after {
+      width: 100%;
+    }
+  }
+
+  .wide-tile.line-info {
+    .col-sm-3 {
+      min-width: 35% !important;
+    }
+
+    .col-sm-9 {
+      max-width: 65% !important;
+    }
+  }
+
+  .line-info.line-info-note {
+    background: $dropdown-link-active-bg;
+    flex-wrap: wrap;
+
+    ul {
+      width: 100%;
+      padding-left: 0.5rem;
+      margin: 0;
+
+      li {
+        list-style: none;
+
+        a {
+          text-decoration: none;
+        }
+      }
+    }
+  }
+
+  .social_insurance_non_returnable-section,
+  .retirement-certificate-section {
+    @extend .mt-3;
+    @extend .mb-3;
+  }
+
+  .retirement-certificate-section {
+    .btn-remove {
+      border: 0;
+      background: none;
+      outline: none;
+      padding: 0;
+    }
+
+    .special-field {
+      &__checkbox {
+        &:checked ~ {
+          .special-field {
+            &__content {
+              .fa-clipboard {
+                color: #3d79d0;
+                opacity: 1;
+              }
+            }
+          }
+        }
+      }
+  
+      .fa-clipboard {
+        color: #7c8291;
+        width: 18px;
+        height: auto;
+        opacity: 0.3;
+      }
+    }
+
+    .btn-aggregate {
+      position: absolute;
+      top: 6px;
+      right: 12px;
+    }
+  }
+
+  .social_insurance_non_returnable-section {
+    ol {
+      margin: 0;
+      padding-left: .5em;
+      li{
+        list-style: none;
+      }
+    }
+  }
+
+  .foreigner-section {
+    .panel-body {
+      > div:first-child {
+        p + p {
+          margin-top: 0.5em;
+        }
+      }
+
+      .residential_status_note {
+        padding-top: 0;
+
+        .control-label  {
+          visibility: hidden;
+        }
+      }
+
+      .residential_status,
+      .residential_status_note,
+      .valid_residential_period {
+        border-bottom: none;
+      }
+
+      .valid_residential_period.form-group,
+      .working_classification {
+        border-top: solid 1px #d4d8dd;
+      }
+
+    }
+  }
+
+  .row-absolute {
+    position: absolute !important;
+    bottom: 38px;
+    left: -6px;
+    width: percentage(1);
+
+    input {
+      background-color: transparent;
+      border-left: none;
+      border-radius: 0;
+      padding-left: 6px;
+    }
+  }
+}
+
+.retirement-confirm {
+  @extend .retirement-edit;
+
+  .foreigner-section {
+    .residential_status_note {
+      margin-top: -1.2em;
+      padding-top: 0;
+    }
+  }
+}
+
+// TODO: After completing update aggregating logic for ALL procedure
+// HelpAggregateButton at src/components/common/GroupBlock.jsx can be removed
+// and below rule should be removed too.
+.retirement-edit,
+.retirement-confirm {
+  .group-block {
+    svg {
+      display: none;
+    }
+  }
+
+  .group-name {
+    .name-label {
+      font-size: 13px;
+    }
+
+    input {
+      min-width: 244px !important;
+
+      &::-webkit-input-placeholder {
+        font-size: 13px !important;
+      }
+
+      &::-moz-placeholder {
+        font-size: 13px !important;
+      }
+
+      &:-ms-input-placeholder {
+        font-size: 13px !important;
+      }
+
+      &:-moz-placeholder {
+        font-size: 13px !important;
+      }
+    }
+  }
+}
+
+.reasons {
+  label,
+  .form-check-label {
+    font-size: 14px;
+    justify-content: flex-start;
+  }
+
+  .form-check,
+  .reason-group {
+    margin-top: 15px;
+
+    .list-btn-radios.radios-inline {
+      margin: 0;
+
+      .form-check {
+        margin: 0;
+      }
+      .form-check + .form-check {
+        margin-left: 10px;
+      }
+    }
+
+    .list-btn-radios {
+      &.has-child-content {
+        justify-content: flex-end;
+        width: 100%;
+      }
+      .child-content {
+        order: 999;
+        width: 100%;
+
+        & + .form-check {
+         margin-left: 10px;
+        }
+      }
+    }
+  }
+
+  .default-dropdown {
+    max-width: unset;
+  }
+
+  .form-control {
+    padding-left: 8px;
+    padding-right: 8px;
+  }
+
+  .list-btn-radios {
+    .form-check {
+      align-items: flex-start;
+
+      .form-check-input {
+        margin-top: 4px;
+      }
+    }
+
+    &.radios-inline {
+      .form-check {
+        margin-bottom: 0;
+        margin-top: 0;
+        margin-left: 20px;
+      }
+
+      .field-error {
+        width: percentage(1);
+      }
+
+      &.field-error-align-right {
+        .field-error {
+          text-align: right;
+        }
+
+      }
+    }
+  }
+
+  .form-check-content {
+    @extend .pl-4;
+  }
+}
+
+.retirement-table {
+  border: none;
+  border-radius: 0;
+  border-bottom: solid #d4d8dd 1px;
+
+  td {
+    &:last-child {
+      border-right: none;
+    }
+  }
+
+  .w-109 {
+    max-width: 109px;
+    min-width: 109px;
+    .flatpickr-input {
+      width: 109px;
+    }
+  }
+
+  .date-picker {
+    .DateInput {
+      &_input {
+        &::-webkit-input-placeholder {
+          font-size: 11px !important;
+        }
+
+        &::-moz-placeholder {
+          font-size: 11px !important;
+        }
+
+        &:-ms-input-placeholder {
+          font-size: 11px !important;
+        }
+
+        &:-moz-placeholder {
+          font-size: 11px !important;
+        }
+      }
+    }
+
+    .DateRangePickerInput {
+      .DateInput {
+        width: calc(100% - 72px - 6px);
+
+        &:first-child {
+          width: 72px;
+          padding-left: 6px;
+        }
+
+        &_input {
+          padding: 0 0 1px 0;
+        }
+      }
+
+      &_arrow {
+        padding-bottom: 2px;
+      }
+    }
+
+    .SingleDatePicker {
+      &Input  {
+        .DateInput {
+          &_input {
+            min-height: 26px;
+            font-size: 12px;
+            padding: 0 2px 1px 8px;
+          }
+        }
+      }
+    }
+  }
+
+  .w-167 {
+    width: 167px;
+
+    .DateRangePickerInput {
+      width: 167px;
+    }
+  }
+
+  .add-more {
+    position: relative;
+    padding-bottom: 44px;
+
+    .form-check {
+      @extend .btn;
+      @extend .btn-primary;
+      position: absolute;
+      bottom: 6px;
+      right: 6px;
+      padding: 0;
+
+      .form-check-label {
+        width: percentage(1);
+        height: percentage(1);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .lbl {
+        display: none;
+
+        &--add {
+          display: inline-block;
+        }
+      }
+
+      &--checked {
+        background: none !important;
+        background-color: #dc3545 !important;
+        border-color: #dc3545 !important;
+
+        &:hover {
+          border-color: #dc3545 !important;
+        }
+
+        .lbl {
+          &--add {
+            display: none;
+          }
+
+          &--remove {
+            display: inline-block;
+          }
+        }
+      }
+    }
+
+    .form-check-input {
+      display: none;
+    }
+
+    .form-check-label {
+      padding-left: 0;
+    }
+  }
+
+  .list-btn-checkboxes {
+    position: relative;
+  }
+
+  @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+    .date-picker {
+      .DateInput {
+        margin-left: 5px;
+
+        &:first-child {
+          width: 205px;
+          margin-left: 0;
+        }
+      }
+    }
+  }
+}
+
+.retirement-review-table {
+  border: none;
+  border-radius: 0;
+
+  td {
+    &:last-child {
+      border-right: none;
+    }
+  }
+
+  th {
+    position: relative;
+  }
+
+  .next-date {
+    display: flex;
+    align-items: center;
+    height: 34px;
+    max-width: 167px;
+    margin-bottom: 0;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    padding: 0 6px;
+    border-top: 1px solid #d4d8dd;
+    border-right: 1px solid #d4d8dd;
+  }
+}
+
+.retired-reason {
+  .reason {
+    margin-top: 20px;
+
+    &:first-child {
+      margin-top: 0;
+    }
+  }
+  .reason-content {
+    padding-left: 15px;
+  }
+
+  .reason-highlight {
+    display: none;
+    &.active {
+      display: block;
+
+      .bg {
+        border-bottom: 1px solid #d4d8dd;
+      }
+    }
+  }
+
+  .reason-option {
+    display: none;
+
+    &.active {
+      display: block;
+    }
+  }
+
+  .bg-text {
+    text-align: center;
+    position: relative;
+    margin: 0 5px;
+
+    &::before {
+      content: '';
+      width: percentage(1);
+      height: 3px;
+      background-color: #d4d8dd;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+    }
+
+    &:empty {
+      border-color: transparent;
+      margin: 0 15px;
+    }
+  }
+}
+

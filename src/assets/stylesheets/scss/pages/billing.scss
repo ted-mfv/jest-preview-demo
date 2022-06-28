@@ -1,0 +1,16 @@
+.billing {
+  .paging {
+    display: flex;
+    align-items: center;
+  }
+}
+
+.billing-details {
+  .table {
+    td {
+      &:last-child {
+        border-right: none;
+      }
+    }
+  }
+}

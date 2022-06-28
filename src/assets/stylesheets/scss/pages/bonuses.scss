@@ -1,0 +1,168 @@
+.bonuses-new {
+  .warning {
+    height: 53px;
+    border-radius: 4px;
+    border: solid 2px #f57575;
+    background-color: #ffeeeb;
+    padding: 16px;
+    color: #d0021b;
+    font-weight: bolder;
+  }
+  .default-dropdown {
+    min-width: 280px !important;
+    max-width: 280px !important;
+
+    label, span, button {
+      font-size: $font-size-base;
+    }
+  }
+
+  .panel {
+    .panel-heading {
+      padding: 12px;
+    }
+
+    .panel-body {
+      p {
+        @extend .pt-2;
+        @extend .pl-2;
+        @extend .pr-2;
+        @extend .ml-1;
+
+        &.no-padding {
+          margin: 0!important;
+          padding: 0!important;
+        }
+      }
+
+      div.elements {
+        @extend .pl-2;
+        @extend .pr-2;
+        @extend .ml-1;
+      }
+
+      .overlay {
+        border: solid 1px $border-color;
+        border-left-width: 0;
+        border-right-width: 0;
+        background-color: #fafafa;
+        height: 36px;
+        width: 100%;
+        margin-left: 0 !important;
+
+        span {
+          margin-left: 4px;
+        }
+
+        &.warning {
+          border: none;
+          background-color: #ffffff;
+        }
+      }
+    }
+  }
+
+  .panel + .panel {
+    margin-top: 32px;
+  }
+
+  .dropdown {
+    width: 100% !important;
+
+    .btn {
+      height: 32px;
+    }
+  }
+}
+
+.bonuses-edit {
+  @extend .bonuses-new;
+
+  &.basic {
+    .month-block {
+      span {
+        margin-right: 15px;
+
+        input, .default-dropdown {
+          margin-right: 5px;
+        }
+      }
+    }
+
+    .default-dropdown {
+      &.small {
+        min-width: 80px !important;
+        max-width: 80px !important;
+      }
+
+      &.custom-control-inline {
+        div {
+          width: 100%;
+        }
+      }
+    }
+  }
+}
+
+.bonuses-review {
+  &.confirm {
+    .block4 {
+      .months {
+        span {
+          &:after {
+            content: " / ";
+            margin: 0 10px;
+          }
+
+          &:last-child {
+            &:after {
+              content: none;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  &.session {
+    dl {
+      dt {
+        min-width: 84px;
+      }
+    }
+
+    table {
+      .datepicker, .default-dropdown {
+        margin: 0;
+      }
+
+      .datepicker {
+        min-width: 120px;
+        max-width: 120px;
+
+        .mt-1 {
+          margin: 0 !important;
+        }
+      }
+
+      .default-dropdown {
+        min-width: 100px;
+        max-width: 100px;
+
+        .dropdown {
+          margin: 0 !important;
+        }
+      }
+
+      tr {
+        td:not(:first-child) {
+          width: max-content;
+        }
+
+        td:first-child {
+          width: 50%;
+        }
+      }
+    }
+  }
+}

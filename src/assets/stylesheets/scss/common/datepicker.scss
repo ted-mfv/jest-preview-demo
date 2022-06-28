@@ -1,0 +1,194 @@
+.flatpickr-calendar.arrowTop:before {
+  border-bottom-color: #c5cbcf !important;
+}
+
+.flatpickr-calendar {
+  box-shadow: 2px 2px 2px 0 rgba(0, 0, 0, 0.1) !important;
+  border: solid 1px #c5cbcf !important;
+  background-color: $white !important;
+
+  .flatpickr-months .flatpickr-month, .flatpickr-weekdays, .flatpickr-weekdays span {
+    background-color: $white;
+  }
+
+  .flatpickr-days {
+    border: 0;
+  }
+
+  span {
+    font-size: $font-size-base !important;
+    color: $gray !important;
+  }
+
+  span.flatpickr-weekday:first-child {
+    color: #d0021b !important;
+  }
+
+  span.flatpickr-weekday:last-child {
+    color: $link-color !important;
+  }
+
+  .flatpickr-day.selected {
+    background-color: $link-color !important;
+    border: 1px solid $link-color !important;
+    color: $white !important;
+  }
+
+  select {
+    border: 1px solid #c5cbcf !important;
+    background-color: #fafafa !important;
+    border-radius: 4px;
+    line-height: 24px;
+    height: 24px;
+    text-align-last:right;
+    padding-right: 29px;
+  }
+
+  select, .cur-month, input.cur-year {
+    font-size: 16px !important;
+    color: $link-color !important;
+  }
+
+  .numInputWrapper {
+    border: 1px solid #c5cbcf !important;
+    background-color: #fafafa !important;
+    border-radius: 4px;
+    display: inline-block;
+
+    &:hover {
+      background-color: #fafafa !important;
+    }
+
+    .arrowUp, .arrowDown {
+      border: 0;
+      width: 8px;
+      height: 5px;
+      background: none;
+      opacity: 1;
+
+      &:after {
+        margin-left: -8px;
+      }
+    }
+
+    .arrowUp {
+      top: 16%;
+    }
+
+    @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+      width: 60px !important;
+    }
+  }
+
+  .cur-month + .numInputWrapper {
+    margin-left: 8px;
+  }
+
+  .flatpickr-prev-month, .flatpickr-next-month {
+    &:hover {
+      svg {
+        fill: $link-color !important;
+      }
+    }
+  }
+}
+
+.datepicker {
+  min-width: calc((100% - 70px)/5);
+  max-width: calc((100% - 70px)/5);
+  margin-right: 12px;
+  margin-bottom: 16px;
+  position: relative;
+
+  label {
+    margin: 0;
+    white-space: nowrap;
+  }
+
+  .flatpickr-input {
+    height: 28px;
+    width: 100%;
+    display: inline-block;
+    border-radius: 4px;
+    border: 1px solid #c5cbcf;
+    color: #6c757d !important;
+    position: relative;
+    padding-left: 8px;
+    font-size: $font-size-sm;
+    background-image: none !important;
+
+    @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+      padding-top: 6px;
+    }
+
+    div {
+      width: inherit;
+    }
+  }
+
+  input:focus {
+    outline: none;
+  }
+
+  svg {
+    position: absolute;
+    right: 6px;
+
+    path {
+      color: #7c8291;
+    }
+  }
+
+  @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+    svg {
+      bottom: 9px;
+    }
+  }
+
+  .field-error {
+    svg, span {
+      position: relative;
+      right: 0;
+      color: $red;
+
+      path {
+        color: $red;
+      }
+    }
+
+    svg {
+      margin-right: 8px;
+    }
+  }
+
+  &.max-width-unset  {
+    max-width: unset;
+  }
+
+  &.w-100  {
+    max-width: 100%;
+  }
+
+  &.inline  {
+    margin-bottom: 0;
+
+    .mt-1.form-inline {
+      margin-top: 0 !important;
+    }
+
+    &.has-error {
+      span.field-error {
+        display: none;
+      }
+    }
+  }
+}
+.info-value {
+  .datepicker {
+    margin: 0;
+
+    .flatpickr-input {
+      font-size: 14px;
+    }
+  }
+}

@@ -1,0 +1,333 @@
+.annual-renewal {
+
+  .no_levy_exemption_ui {
+    display: none !important;
+  }
+
+  &.no-levy_exemption {
+    .no_levy_exemption_ui {
+      display: inline-block !important;
+    }
+
+    .levy_exemption_ui {
+      display: none !important;
+    }
+  }
+
+  &.is-not-allow-to-generate-pdf {
+    .table.racer {
+      button.btn-create_racer {
+        @extend .btn-disabled;
+        pointer-events: none;
+      }
+    }
+  }
+
+  &:not(.no-levy_exemption) {
+    .table.racer {
+      button.btn-create_racer {
+        @extend .btn-disabled;
+        pointer-events: none;
+      }
+    }
+  }
+
+  .form-summary-errors {
+    .alert {
+      margin: 0 0 32px 0 !important;
+    }
+  }
+
+  .btn-lx {
+    width: 180px;
+  }
+
+  .unemployment-rate-calc-table {
+    border-left: none;
+    border-right: none;
+    border-bottom: none;
+    border-radius: unset;
+    .rate-input {
+      width: 80px;
+    }
+  }
+}
+
+.modal[role="dialog"] {
+  .wage_summary_detail_table {
+    max-height: 85vh;
+    padding-right: 5px;
+    overflow-y: auto;
+  }
+}
+
+.annual-renewal-new,
+.annual-renewal-edit,
+.annual-renewal-review {
+  .panel {
+    .panel-heading {
+      padding: 12px;
+    }
+  }
+
+  .btn.btn-sm[type="submit"] {
+    width: 15% !important;
+  }
+}
+
+.annual-renewal-new,
+.annual-renewal-edit {
+  @extend .anytimrevs-new;
+
+  .panel + .panel {
+    margin-top: 16px;
+  }
+}
+
+.annual-renewal-edit {
+  td {
+    input {
+      padding-left: 8px;
+    }
+  }
+
+  .payment-period,
+  .excess-shortage,
+  .payment-method {
+    .form-check-input,
+    .form-check-label {
+      display: none;
+    }
+  }
+}
+
+table.labor-insurance, table.compensation-insurance {
+  border-left: 0 !important;
+  border-bottom: 0 !important;
+  border-right: 0 !important;
+  border-radius: 0 !important;
+
+  th, .font-12 {
+    vertical-align: middle;
+    font-size: 12px;
+  }
+
+  .narrow-cell {
+    td {
+      padding: 5px;
+
+      input {
+        padding-left: 5px;
+      }
+    }
+  }
+
+  td {
+    &.bonus-datepicker-wrapper {
+      min-width: 115px;
+      padding: 8px 4px;
+
+      > div {
+        display: inline-block;
+      }
+
+      .datepicker, .rw-datetime-picker {
+        display: inline-flex;
+        margin: 0;
+        padding-left: 2px;
+
+        .form-inline {
+          position: relative;
+          margin: 0 !important;
+        }
+
+        input.rw-input[type="text"] {
+          width: 75px;
+          max-width: 75px;
+        }
+      }
+
+      .has-error {
+        input {
+          border-color: #dc3545;
+        }
+      }
+
+      .field-error {
+        display: none;
+      }
+    }
+
+    input[type="text"] {
+      width: 100%;
+      height: 28px;
+      border-radius: 4px;
+      border: solid 1px #c5cbcf;
+      background-color: #ffffff;
+
+      &:-ms-input-placeholder, /* IE 10-11 */
+      &::-ms-input-placeholder /* Edge */ {
+        font-size: 0.9em !important;
+      }
+      &::-webkit-input-placeholder, /* WebKit */
+      &::placeholder {
+        font-size: 0.9em !important;
+      }
+    }
+
+    input[type="text"]:disabled {
+      background: #fafafa;
+    }
+
+    &.total-cell {
+      input {
+        min-width: 100px;
+      }
+    }
+    &.levy_exemption-cell {
+      input {
+        min-width: 80px;
+      }
+    }
+
+    .bonus-input {
+      input {
+        width: 206px;
+      }
+    }
+
+    input.bonus-input {
+      width: 206px;
+    }
+  }
+
+  td.bg-gray {
+    background: #fafafa;
+  }
+
+  .field-error {
+    display: none;
+  }
+}
+
+table.labor-insurance {
+  border-top: 0;
+
+  td {
+    input[type="text"] {
+      width: 157px;
+      height: 32px;
+      border-radius: 4px;
+      border: solid 1px #c5cbcf;
+      background-color: #ffffff;
+    }
+
+    input.med,
+    .med input {
+      width: 60px;
+    }
+
+    input[type="text"]:disabled {
+      background: #fafafa;
+    }
+
+    span.first-unit {
+      color: #999999;
+      margin-right: 8px;
+    }
+
+    span.last-unit {
+      margin-left: 8px
+    }
+  }
+}
+
+.w-960 {
+  width: 960px !important;
+}
+
+.w-1009 {
+  width: 1009px !important;
+}
+
+
+table.term {
+  table-layout: fixed;
+
+  td {
+    input {
+      width: 96px !important;
+    }
+  }
+}
+
+.annual-renewal-errors {
+  .form-alert-box {
+    margin: 0 0 15px 0 !important;
+  }
+}
+
+.modal-aggregate {
+  .modal-body {
+    min-height: 0;
+
+    p,
+    label {
+      font-size: 14px;
+      line-height: 21px;
+    }
+  }
+
+  .item {
+    &__btn {
+      display: inline-block;
+      border: none;
+      background: none;
+      min-width: 0;
+      width: auto !important;
+      height: auto;
+      position: relative;
+      padding-left: 24px;
+
+      &:before, &:after {
+        content: "";
+        position: absolute;
+        border-radius: 50%;
+      }
+
+      &:before {
+        width: 16px;
+        height: 16px;
+        background-color: $white;
+        position: absolute;
+        top: 3px;
+        left: 0;
+        border: 1px solid #c5cbcf;
+      }
+
+      &:after {
+        width: 6px;
+        height: 6px;
+        background-color: $white;
+        top: 8px;
+        left: 5px;
+        opacity: 0;
+      }
+
+      &:hover {
+        opacity: 1;
+      }
+
+      &.active {
+        &::before {
+          background-color: #3d79d0;
+          border: 1px solid rgba(168, 141, 141, 0.15);
+        }
+
+        &:after {
+          opacity: 1;
+        }
+      }
+    }
+  }
+}

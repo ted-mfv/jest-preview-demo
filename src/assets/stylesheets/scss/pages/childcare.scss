@@ -1,0 +1,879 @@
+$sizes: 1126, 277, 275, 215, 226, 209, 146, 133, 116, 107, 100, 90, 92, 87, 80, 77, 72, 60, 59, 45, 30;
+
+@each $size in $sizes {
+  .width-#{$size} {
+    width: $size * 1px;
+  }
+}
+
+.childcare {
+  .sticky-table {
+    position: relative;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+
+    .columns {
+      position: relative;
+      z-index: 1;
+
+      .table {
+        th {
+          height: 80px;
+          vertical-align: middle;
+          border-radius: 0;
+        }
+
+        td {
+          border-radius: 0;
+          height: 118px;
+
+          &:last-child {
+            border-right: none;
+          }
+        }
+
+        .disabled {
+          opacity: 1;
+          color: #999999;
+          background-color: $white;
+        }
+
+        .br-width-2 {
+          border-right-width: 2px;
+        }
+      }
+
+      &--left {
+        width: 495px;
+        height: percentage(1);
+        box-shadow: 2px 0 3px 0 rgba(0, 0, 0, 0.05);
+
+        .table {
+          width: 495px;
+        }
+      }
+
+      &--content {
+        overflow: auto;
+        width: calc(100% - 495px - 68px);
+        height: calc(100% + 17px);
+        overflow-x: auto;
+        position: absolute;
+        top: 0;
+        left: 495px;
+        z-index: 1;
+
+        .table {
+          table-layout: fixed;
+          border-left: none;
+          border-right: none;
+
+          th {
+            height: 40px;
+            text-align: center;
+
+            &:last-child {
+              border-right: none;
+            }
+          }
+        }
+      }
+
+      &--right {
+        width: 68px;
+        height: percentage(1);
+        box-shadow: -2px 0 3px 0 rgba(0, 0, 0, 0.1);
+
+        .table {
+          width: 68px;
+        }
+      }
+    }
+
+    .status-column {
+      display: flex;
+      height: percentage(1);
+      flex-flow: column nowrap;
+      align-items: stretch;
+      padding: 0;
+    }
+
+    .status-row {
+      width: percentage(1);
+      display: flex;
+      align-items: center;
+      border-top: 1px solid #eff1f4;
+      padding: 0 8px;
+
+      &:first-child {
+        border-top: none;
+      }
+
+      &--1 {
+        height: 37px;
+      }
+
+      &--2 {
+        height: calc(100% - 37px);
+      }
+    }
+
+    .svg-inline {
+      &--fa {
+        font-size: 16px;
+        color: $blue;
+        margin-bottom: 2px;
+        margin-left: 7px;
+      }
+    }
+  }
+
+  & {
+    section.select-display-content {
+      display: flex;
+      flex-wrap: nowrap;
+      align-items: baseline;
+      justify-content: flex-start;
+
+      h4 {
+        margin: 0;
+        @extend .font-weight-bold;
+        font-size: 16px;
+      }
+
+      form {
+        margin-left: 8px;
+      }
+
+      .default-dropdown {
+        margin: 0;
+
+        .dropdown {
+          margin-top: 0 !important;
+          width: 80px;
+          height: 32px;
+
+          > .btn > span {
+            font-size: 14px;
+          }
+        }
+      }
+    }
+  }
+}
+
+.childcare-fields,
+.wage-fields {
+  .form-group {
+    &--file {
+      .info-value {
+        .default-input {
+          min-width: 0;
+          width: auto;
+
+          &--file {
+            .form-control {
+              border: none;
+              display: none;
+            }
+
+            label {
+              display: inline-flex;
+              min-width: 108px;
+              padding: 0 11px;
+              height: 24px;
+              align-items: center;
+              justify-content: center;
+              border-radius: 4px;
+              box-shadow: 0 1px 1px 0 rgba($black, 0.1);
+              border: solid 1px $border-color;
+              background-image: linear-gradient(to top, $white, $white 33%);
+              color: $gray;
+              cursor: pointer;
+            }
+
+            .file-name {
+              line-height: 1.5;
+              letter-spacing: 0.07px;
+              color: #3b7de9;
+              font-size: 14px;
+              margin-left: 12px;
+            }
+
+            .file-note {
+              color: #999999;
+              margin-top: 8px;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .line-info {
+    &--normal {
+      .control-label {
+        font-weight: normal;
+      }
+    }
+
+    &.line-info-note {
+      background: #fafafa;
+    }
+
+    &--without-label {
+      .control-label {
+        opacity: 0;
+      }
+    }
+  }
+
+  .field-title {
+    font-size: 14px;
+    font-weight: bold;
+    color: #999999;
+    padding: 0 12px 6px 12px;
+    height: 45px;
+    display: flex;
+    align-items: flex-end;
+    border-bottom: 1px solid #d4d8dd;
+
+    &--small {
+      height: 23px;
+    }
+  }
+
+  .childcare-address {
+    &__footer {
+      padding: 12px 0;
+      border-top: 1px solid #eff1f4;
+    }
+  }
+
+  .panel {
+    &--custom {
+      .control-label {
+        width: 124px;
+        min-width: 124px;
+      }
+
+      .info-value {
+        flex: 0 0 calc(100% - 124px);
+        max-width: calc(100% - 124px);
+      }
+
+      .sub-title {
+        font-size: 14px;
+      }
+    }
+  }
+
+  .radios-inline {
+    .form-check {
+      margin: 0;
+      margin-left: 15px;
+
+      &:first-child {
+        margin-left: 0;
+      }
+    }
+  }
+
+  .date-picker {
+    .DateInput {
+      &_input {
+        font-size: 14px;
+        height: percentage(1);
+
+        &::-webkit-input-placeholder {
+          font-size: 14px !important;
+        }
+
+        &::-moz-placeholder {
+          font-size: 14px !important;
+        }
+
+        &:-ms-input-placeholder {
+          font-size: 14px !important;
+        }
+
+        &:-moz-placeholder {
+          font-size: 14px !important;
+        }
+      }
+    }
+
+    .DateRangePicker {
+      &_picker {
+        top: 39px !important;
+      }
+    }
+
+    .SingleDatePickerInput {
+      &_calendarIcon  {
+        svg {
+          width: 13px;
+          height: auto;
+        }
+      }
+
+      .DateInput {
+        height: 32px;
+
+        &_input {
+          font-size: 14px;
+          height: percentage(1);
+        }
+      }
+    }
+
+    .DateRangePickerInput {
+      border: 0;
+      justify-content: space-between;
+
+      &_arrow {
+        width: auto;
+        padding: 0 8px;
+        justify-content: center;
+        white-space: nowrap;
+      }
+
+      &_calendarIcon  {
+        svg {
+          width: 13px;
+          height: auto;
+        }
+      }
+
+      .DateInput {
+        width: 116px;
+        height: 32px;
+        border-radius: 4px;
+        border: 1px solid #c5cbcf;
+        padding: 0 8px;
+
+        &:first-child {
+          width: 116px;
+          padding: 0 8px;
+        }
+      }
+    }
+  }
+
+  .info-value {
+    .width-470 {
+      .date-picker,
+      .datepicker {
+        width: 470px;
+        max-width: 470px;
+        min-width: 0;
+      }
+    }
+
+    .width-434 {
+      .date-picker,
+      .datepicker {
+        width: 434px;
+        max-width: 434px;
+        min-width: 0;
+      }
+    }
+  }
+
+  .custom-field {
+    position: relative;
+    min-height: 33px;
+
+    .control-label {
+      &--absolute {
+        position: absolute;
+        top: 0;
+        left: 0;
+      }
+    }
+
+    .list-btn-radios {
+      &.radios-inline {
+        .form-check {
+          margin-bottom: 12px;
+
+          .form-check-label {
+            font-size: 14px;
+          }
+
+          &:first-child {
+            margin-left: 228px;
+          }
+        }
+
+        .field-error {
+          margin-left: 228px;
+        }
+      }
+
+      &__content {
+        & ~ .field-error {
+          margin-bottom: 12px;
+          margin-left: 10px;
+        }
+      }
+
+      &.read-only {
+        .form-check {
+          &:not(:first-child){
+            margin-left: 0;
+          }
+        }
+      }
+    }
+
+    .empty-value {
+      margin-left: 230px;
+      margin-bottom: 12px;
+    }
+
+    &--extend-reason {
+      > .control-label  {
+        position: absolute;
+        left: 15px;
+        top: 84px;
+        width: 196px;
+      }
+
+      .list-btn-checkboxes  {
+        padding-left: 231px;
+        width: percentage(1);
+      }
+
+      .custom-field {
+        &__content {
+          padding: 8px 15px 0 15px;
+          border-top: 1px solid #eff1f4;
+        }
+      }
+    }
+
+    .pl-228 {
+      padding-left: 228px;
+    }
+
+    .w-228 {
+      width: 228px;
+    }
+  }
+
+  .custom-datetime {
+    .icon-calendar {
+      position: absolute;
+      top: 13px;
+      width: 13px;
+      height: auto;
+    }
+
+    &--1 {
+      .icon-calendar {
+        right: 277px;
+      }
+    }
+
+    &--2 {
+      .icon-calendar {
+        right: 241px;
+      }
+    }
+
+    &--3 {
+      .icon-calendar {
+        right: 152px;
+        top: 7px;
+      }
+    }
+  }
+
+  .form-inline {
+    &:last-child {
+      .line-info {
+        border-bottom: none !important;
+      }
+    }
+  }
+
+  .unit-absolute {
+    right: auto;
+    left: percentage(1);
+    margin-left: 8px;
+    white-space: nowrap;
+  }
+
+  .unit {
+    display: inline-block;
+    margin-left: 8px;
+  }
+
+  .lbl-suffix {
+    height: 32px;
+    display: inline-flex;
+    align-items: center;
+    margin-top: 4px;
+  }
+
+  .field-with-spin {
+    display: inline-block;
+    position: relative;
+
+    .icon-spin {
+      position: absolute;
+      top: 7px;
+    }
+  }
+
+  &--read-only {
+    .form-value {
+      &--empty {
+        ~ .lbl-suffix {
+          display: none;
+        }
+      }
+
+      &__input:not([type='radio']):not([type='checkbox']) {
+        border: none;
+        outline: none;
+        padding: 0;
+
+        &:focus {
+          outline: none;
+          box-shadow: none;
+          border: none;
+        }
+      }
+    }
+
+    .lbl-suffix {
+      height: auto;
+      margin-top: 0;
+    }
+
+    .custom-field {
+      &--extend-reason {
+        > .control-label {
+          top: 8px;
+        }
+
+        .form-check {
+          min-height: 21px;
+        }
+
+        .empty-value {
+          min-height: 21px;
+        }
+      }
+    }
+
+    .badge-danger {
+      display: none;
+    }
+  }
+}
+
+.childcare-new {
+  @extend .join-company-new;
+}
+
+.count-list {
+  .default-dropdown {
+    width: percentage(1);
+    max-width: percentage(1);
+    margin-bottom: 0;
+
+    .dropdown-toggle {
+      padding-right: 20px;
+    }
+  }
+
+  .checklist {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    font-size: 12px;
+    letter-spacing: 0.06px;
+
+    .item {
+      padding: 8px;
+
+      &+.item {
+        border-top: 1px solid #eff1f4;
+      }
+    }
+  }
+
+  .btn-default {
+    color: #333333 !important;
+  }
+}
+
+.application-payment {
+  .width-100 {
+    width: 100px;
+
+    .default-dropdown {
+      min-width: percentage(1);
+      max-width: percentage(1);
+    }
+  }
+
+  .info-value {
+    .small-field {
+      min-width: 200px;
+      max-width: 200px;
+
+      input {
+        min-width: 0;
+      }
+    }
+
+    .width-80 {
+      width: 80px;
+
+      &.default-input {
+        width: auto;
+      }
+
+      .form-control {
+        min-width: 80px;
+        max-width: 80px;
+      }
+
+      .unit-absolute {
+        right: auto;
+        left: 85px;
+      }
+    }
+
+    .datepicker {
+      .DateRangePickerInput {
+        height: 32px;
+        background-color: transparent;
+      }
+    }
+
+    .width-60 {
+      .form-control {
+        min-width: 0;
+        width: 60px;
+      }
+    }
+  }
+
+  .list-btn-radios {
+    .form-check {
+      align-items: flex-start;
+
+      .form-check-input {
+        margin-top: 4px;
+      }
+    }
+
+    &.radios-inline {
+      .form-check {
+        margin-bottom: 0;
+        margin-top: 0;
+        margin-left: 20px;
+
+        &:first-child {
+          margin-left: 0;
+        }
+      }
+
+      .field-error {
+        width: percentage(1);
+      }
+
+      &.field-error-align-right {
+        .field-error {
+          text-align: right;
+        }
+
+      }
+    }
+  }
+
+  .date-picker {
+    .DateRangePickerInput {
+      .DateInput {
+        width: 200px;
+
+        &:first-child {
+          width: 200px;
+        }
+      }
+    }
+  }
+
+  .panel {
+    &--last-info {
+      .custom-field {
+        margin-top: 12px;
+        min-height: 90px;
+      }
+    }
+  }
+}
+
+.wage-certificate {
+  .row-absolute {
+    position: absolute !important;
+    bottom: 38px;
+    left: -6px;
+    width: 100%;
+
+    input {
+      background-color: transparent;
+      border-left: none;
+      border-radius: 0;
+      padding-left: 6px;
+    }
+  }
+
+  .info-value {
+    .width-60 {
+      .form-control {
+        min-width: 0;
+        width: 60px;
+      }
+    }
+
+    .hide-error {
+      .field-error {
+        display: none;
+      }
+    }
+  }
+
+  .btn-remove {
+    border: 0;
+    background: none;
+    outline: none;
+    padding: 0;
+  }
+
+  .btn-add {
+    width: 81px;
+  }
+
+  .special-field {
+    &__checkbox {
+      &:checked ~ {
+        .special-field {
+          &__content {
+            .fa-clipboard {
+              color: #3d79d0;
+              opacity: 1;
+            }
+          }
+        }
+      }
+    }
+
+    .fa-clipboard {
+      color: #7c8291;
+      width: 18px;
+      height: auto;
+      opacity: 0.3;
+    }
+  }
+
+  .datepicker {
+    .DateRangePickerInput {
+      background-color: transparent;
+    }
+  }
+
+  .custom-field {
+    .list-btn-radios {
+      &.radios-inline {
+        .field-error {
+          width: percentage(1);
+          margin-left: 0;
+          padding-left: 228px;
+        }
+      }
+    }
+  }
+
+  .btn-aggregate {
+    position: absolute;
+    top: 6px;
+    right: 12px;
+  }
+}
+
+.childcare-table {
+  @extend .retirement-table;
+
+  thead {
+    th {
+      vertical-align: middle;
+    }
+
+    .vertical-align-top {
+      vertical-align: top;
+    }
+  }
+
+  .w-45 {
+    width: 45px;
+  }
+
+  .small-text {
+    font-size: 12px;
+    letter-spacing: 0.06px;
+  }
+
+  .default-input {
+    &.inline {
+      input {
+        height: 32px;
+      }
+    }
+  }
+
+  .form-value {
+    &--empty {
+      visibility: hidden;
+    }
+  }
+
+  &.custom-table {
+    &--read-only {
+      .is-cta {
+        display: none;
+      }
+
+      .next-to-last-col {
+        border-right: 0;
+      }
+    }
+  }
+}
+
+.childcare-apply_review  {
+  .btn-cta {
+    display: none;
+  }
+}
+
+.childcare-employment-period {
+  .form-control {
+    padding-left: 8px;
+  }
+
+  .date-picker {
+    min-width: 280px;
+    max-width: 280px;
+  }
+
+  .hide-error .field-error {
+    display: none;
+  }
+}

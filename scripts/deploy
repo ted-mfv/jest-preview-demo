@@ -1,0 +1,97 @@
+#!/bin/bash
+
+set -eu
+set -o pipefail
+
+APP_DIR=$(cd $(dirname $0)/.. && pwd)
+
+DEFAULTVALUE=""
+suffix="${SUFFIX:-$DEFAULTVALUE}"
+
+## declare an array variable
+declare -a servicesArray=("web")
+
+status() {
+  echo -e "[DEPLOY]: ${1}"
+}
+
+configure_aws_cli() {
+  aws configure set default.region $AWS_REGION
+  aws configure set default.output json
+}
+
+register_task_defs() {
+  for i in "${servicesArray[@]}"
+  do
+    # example:
+    # jsonnet --ext-str env=staging --ext-str image_tag=222 --ext-str ecr_registry_id=111 --ext-str suffix=_test task_definitions/app.jsonnet
+    new_task_definition=$(jsonnet --ext-str env=$ENVIRONMENT \
+                          --ext-str image_tag=$CIRCLE_SHA1 \
+                          --ext-str ecr_registry_id=$ECR_AWS_ACCOUNT_ID \
+                          --ext-str suffix=$suffix \
+                          $APP_DIR/scripts/task_definitions/$i.jsonnet \
+                          | jq '[. | .["cpu"] = .cpu_ | .["memory"] = .memory_ | del(.cpu_, .memory_)][0]')
+
+    status "This is a new ${i} task definition"
+    echo $new_task_definition | jq .
+    echo $new_task_definition > /tmp/new_task_definition.json
+
+    status "Registering ${i} task definition..."
+    ## must specify a family name
+    if new_task_arn=$(aws ecs register-task-definition \
+        --family "${ECS_SERVICE}_${i}${suffix}" \
+        --cli-input-json file:///tmp/new_task_definition.json); then
+      status "Successfully registering task"
+    else
+      status "Failed to register task"
+      exit 1
+    fi
+  done
+}
+
+update_service() {
+  status "Updating service '${service_name}'"
+  updated_service=$(
+    aws ecs update-service \
+      --cluster ${ECS_CLUSTER} \
+      --service "${ECS_SERVICE}_${service_name}" \
+      --task-definition "${ECS_SERVICE}_${service_name}"
+  )
+}
+
+wait_for_service() {
+  status "Waiting for ECS service '${service_name}' to become stable on ${ECS_CLUSTER} cluster..."
+  aws ecs wait services-stable \
+    --cluster ${ECS_CLUSTER} \
+    --services "${ECS_SERVICE}_${service_name}"
+  status "Done!"
+}
+
+deploy() {
+
+  for service in "${servicesArray[@]}"
+  do
+    service_name="${service}${suffix}"
+    status "Deploying '${service}' service on ${ECS_CLUSTER} cluster"
+    update_service
+  done
+
+  for service in "${servicesArray[@]}"
+  do
+    service_name="${service}${suffix}"
+    status "Waiting for '${service}' service on ${ECS_CLUSTER} cluster..."
+    wait_for_service
+  done
+}
+
+invalidate_cloudfront() {
+  status "Creating cloudfront invalidation"
+  aws cloudfront create-invalidation --distribution-id ${CLOUDFRONT_DISTRIBUTION_ID} --paths "/*"
+}
+
+configure_aws_cli
+register_task_defs
+deploy
+invalidate_cloudfront
+
+exit 0

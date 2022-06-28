@@ -1,0 +1,295 @@
+@import "../variables/variables";
+
+.table {
+  margin-bottom: 0;
+}
+
+.simple-table {
+  th, td {
+    padding: 8px;
+  }
+  thead {
+    background-color: #fafafa;
+  }
+
+  thead th {
+    vertical-align: middle;
+    border-bottom: 1px solid $border-color;
+    border-top: 0;
+  }
+
+  &.v-center-cell {
+    th, td {
+      vertical-align: middle;
+    }
+  }
+  &.table-bordered {
+    border: none;
+
+    th {
+      border-left: none;
+      border-right: 1px solid #d4d8dd;
+    }
+
+    td {
+      border-left: none;
+      border-right: 1px solid #d4d8dd;
+    }
+  }
+}
+
+.simple-table-bordered {
+  width: calc(100% + 1px);
+
+  thead {
+    background-color: #fafafa;
+    th {
+      border-bottom: none;
+      border-top: none;
+    }
+  }
+
+  th:first-child, td:first-child {
+    border-left: none;
+  }
+
+  th:last-child, td:last-child {
+    border-right: none;
+  }
+
+  th, td {
+    border-right: 1px solid #d4d8dd;
+    text-align: left !important;
+  }
+}
+
+.custom-table {
+  border-collapse: separate !important;
+  border-spacing: 0;
+  border: solid $border-color 1px;
+  -moz-border-radius: 4px;
+  -webkit-border-radius: 4px;
+  border-radius: 4px;
+
+  &.narrow {
+    thead th, tr td, th, td {
+     padding: 6px;
+    }
+  }
+
+  thead th {
+    background-color: #e7f1fd;
+    padding: 8px;
+    border-bottom: 0;
+  }
+
+  th, td {
+    border-right: 1px solid $border-color;
+    color: $gray;
+    font-size: 14px;
+    font-weight: normal;
+    vertical-align: middle;
+
+    &.fit-content {
+      width: 1%;
+      white-space: nowrap;
+    }
+  }
+
+  tr td {
+    padding: 8px;
+    background-color: $white;
+  }
+
+  td {
+    .btn + .btn {
+      margin-left: 0;
+      margin-top: 12px;
+    }
+
+    &.inline-buttons {
+      .btn + .btn {
+        margin-left: 8px;
+        margin-top: 0;
+      }
+    }
+  }
+
+  tr:first-child {
+    th {
+      border-top: 0;
+    }
+
+    th:first-child {
+      -moz-border-radius: 4px 0 0 0;
+      -webkit-border-radius: 4px 0 0 0;
+      border-radius: 4px 0 0 0;
+    }
+  }
+
+  tr:last-child {
+    td {
+      border-bottom: 0 !important;
+    }
+  }
+
+  td:not([rowSpan]):first-child, th:first-child {
+    border-left: none;
+  }
+
+  tr:first-child {
+    th:last-child {
+      border-right: 0;
+      border-top-right-radius: 4px;
+    }
+  }
+
+  tr:nth-last-child(2) {
+    td[rowspan="2"] {
+      &:first-child {
+        border-bottom-left-radius: 4px;
+      }
+      &:last-child {
+        border-bottom-right-radius: 4px;
+      }
+    }
+  }
+
+  td {
+    &.sub {
+      color: $gray-sub;
+    }
+
+    .button-group-inline {
+      width: max-content;
+
+      button + button {
+        margin-left: 8px !important;
+        margin-top: 0 !important;
+      }
+    }
+  }
+
+  th {
+    .icon-sort {
+      cursor: pointer;
+    }
+  }
+
+  &.gray-theme {
+    thead th {
+      background-color: #fafafa;
+    }
+  }
+
+  &.racer {
+    thead th {
+      background-color: #fafafa;
+    }
+
+    a {
+      &.btn-primary {
+        color: #fff !important;
+        padding: 5px 16px;
+
+        &:hover {
+          text-decoration: none !important;
+        }
+      }
+    }
+  }
+}
+
+.was_deleted {
+  background-color: #fafafa !important;
+}
+
+table {
+  tr:last-child {
+    td:first-child {
+      border-bottom-left-radius: 4px;
+    }
+    td:last-child {
+      border-bottom-right-radius: 4px;
+    }
+  }
+}
+
+.racer.table, .egov-submission.table {
+  tr {
+    th {
+      vertical-align: middle;
+    }
+  }
+}
+
+.egov-comments {
+  display: flex;
+  max-width: 52px;
+  flex-wrap: wrap;
+  align-items: center;
+
+  svg {
+    font-size: 16px;
+    margin: 0;
+  }
+
+  svg + svg {
+    margin-left: 8px;
+  }
+
+  svg:nth-child(3n + 1) {
+    margin-left: 0;
+  }
+}
+
+.racer, .egov-submission {
+  svg {
+    cursor: pointer;
+  }
+}
+
+.app-form-error {
+  &:not(:last-child) {
+    margin-bottom: 2rem;
+  }
+  .header {
+    .form-name {
+      margin: 0;
+      padding: 10px 0;
+
+      background-color: #fafafa;
+      border: 1px solid #d4d8dd;
+      border-bottom: 0;
+      border-radius: 4px 4px 0 0;
+
+      line-height: 21px;
+    }
+    .error-count {
+      margin: 0;
+      padding: 10px 8px;
+      border: 1px solid #d4d8dd;
+    }
+  }
+  .collapse-toggle {
+    padding: 6px 0;
+    border: 1px solid #d4d8dd;
+    border-top: 0;
+    border-radius: 0 0 4px 4px;
+  }
+
+  .error-table {
+    &.table.custom-table {
+      border-radius: 0;
+      border-top: 0;
+      tr {
+        th, td {
+          border-radius: 0;
+        }
+        td:last-child {
+          border-right: 0;
+        }
+      }
+    }
+  }
+}

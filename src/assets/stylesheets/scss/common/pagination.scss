@@ -1,0 +1,49 @@
+// for pagianation
+
+.paging {
+  display: inherit;
+  align-items: center;
+  width: 100%;
+
+  ul {
+    margin: 0;
+  }
+
+  span {
+    font-size: 14px;
+    font-weight: bold;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.5;
+    letter-spacing: 0.07px;
+  }
+
+  span + .pagination {
+    margin-left: 4px;
+  }
+
+  .pagination {
+    // width: 70%;
+    margin: 0;
+  }
+
+  a:focus {
+    outline: none !important;
+  }
+
+  .break-me {
+    padding: 3px 2px 0 2px;
+    a {
+      color: $gray-sub !important;
+      font-size: $font-size-sm !important;
+    }
+  }
+
+  .font-weight-bold {
+    font-family: Meiryo, メイリオ, "Hiragino Kaku Gothic Pro", "ヒラギノ角ゴ Pro W3", "MS PGothic", Osaka, arial, helvetica, clean, sans-serif;
+  }
+
+  &:empty {
+    padding: 0 !important;
+  }
+}

@@ -1,0 +1,473 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<GroupInformation/> should render normally 1`] = `
+<div>
+  <div
+    class="group-information panel panel-default border rounded anytime-group-info-container"
+  >
+    <div
+      class="panel-heading d-flex align-items-center border-bottom font-weight-bold"
+    >
+      事業所情報
+    </div>
+    <div
+      class="panel-body pl-3 pr-3 pb-0 col-sm-12"
+    >
+      <div
+        class="row"
+      >
+        <div
+          class="col-sm-12 border-bottom-sub"
+        >
+          <div
+            class="form-inline w-100 null"
+          >
+            <div
+              class="form-group w-100 line-info pl-0"
+            >
+              <div
+                class="control-label col-sm-4 p-0"
+              >
+                本社
+              </div>
+              <div
+                class="col-sm-8 info-value"
+                data-js-label="本社"
+              >
+                <span
+                  class="value"
+                >
+                  Test
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          class="col-sm-12 border-bottom-sub"
+        >
+          <div
+            class="form-inline w-100 null"
+          >
+            <div
+              class="form-group w-100 line-info pl-0"
+            >
+              <div
+                class="control-label col-sm-4 p-0"
+              >
+                事業所名
+              </div>
+              <div
+                class="col-sm-8 info-value"
+                data-js-label="事業所名"
+              >
+                <span
+                  class="value"
+                >
+                  test val
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          class="col-sm-12 border-bottom-sub"
+        >
+          <div
+            class="form-inline w-100 null"
+          >
+            <div
+              class="form-group w-100 line-info pl-0"
+            >
+              <div
+                class="control-label col-sm-4 p-0"
+              >
+                事業所名（フリガナ）
+              </div>
+              <div
+                class="col-sm-8 info-value"
+                data-js-label="事業所名（フリガナ）"
+              >
+                <span
+                  class="value"
+                >
+                  test val
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          class="col-sm-12 border-bottom-sub"
+        >
+          <div
+            class="form-inline w-100 null"
+          >
+            <div
+              class="form-group w-100 line-info pl-0"
+            >
+              <div
+                class="control-label col-sm-4 p-0"
+              >
+                電話番号
+              </div>
+              <div
+                class="col-sm-8 info-value"
+                data-js-label="電話番号"
+              >
+                <span
+                  class="value"
+                >
+                  test val
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          class="col-sm-12 border-bottom-sub"
+        >
+          <div
+            class="form-inline w-100 null"
+          >
+            <div
+              class="form-group w-100 line-info pl-0"
+            >
+              <div
+                class="control-label col-sm-4 p-0"
+              >
+                郵便番号
+              </div>
+              <div
+                class="col-sm-8 info-value"
+                data-js-label="郵便番号"
+              >
+                <span
+                  class="value"
+                >
+                  test val
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          class="col-sm-12 border-bottom-sub"
+        >
+          <div
+            class="form-inline w-100 null"
+          >
+            <div
+              class="form-group w-100 line-info pl-0"
+            >
+              <div
+                class="control-label col-sm-4 p-0"
+              >
+                都道府県
+              </div>
+              <div
+                class="col-sm-8 info-value"
+                data-js-label="都道府県"
+              >
+                <span
+                  class="value"
+                >
+                  Test val 2
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          class="col-sm-12 border-bottom-sub"
+        >
+          <div
+            class="form-inline w-100 null"
+          >
+            <div
+              class="form-group w-100 line-info pl-0"
+            >
+              <div
+                class="control-label col-sm-4 p-0"
+              >
+                市区町村
+              </div>
+              <div
+                class="col-sm-8 info-value"
+                data-js-label="市区町村"
+              >
+                <span
+                  class="value"
+                >
+                  Test val 2
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          class="col-sm-12 border-bottom-sub"
+        >
+          <div
+            class="form-inline w-100 null"
+          >
+            <div
+              class="form-group w-100 line-info pl-0"
+            >
+              <div
+                class="control-label col-sm-4 p-0"
+              >
+                ビル名
+              </div>
+              <div
+                class="col-sm-8 info-value"
+                data-js-label="ビル名"
+              >
+                <span
+                  class="value"
+                >
+                  Test val 2
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        class="bg-disable border-top-sub border-bottom-sub ml-n3 mr-n3 pl-2 pr-3 pt-2 pb-2"
+      >
+        事業主情報
+      </div>
+      <div
+        class="row"
+      >
+        <div
+          class="col-sm-12 border-bottom-sub"
+        >
+          <div
+            class="form-inline w-100 null"
+          >
+            <div
+              class="form-group w-100 line-info pl-0"
+            >
+              <div
+                class="control-label col-sm-4 p-0"
+              >
+                事業主名
+              </div>
+              <div
+                class="col-sm-8 info-value"
+                data-js-label="事業主名"
+              >
+                <span
+                  class="value"
+                >
+                  Test val 2
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          class="col-sm-12 border-bottom-sub"
+        >
+          <div
+            class="form-inline w-100 null"
+          >
+            <div
+              class="form-group w-100 line-info pl-0"
+            >
+              <div
+                class="control-label col-sm-4 p-0"
+              >
+                事業主名（フリガナ）
+              </div>
+              <div
+                class="col-sm-8 info-value"
+                data-js-label="事業主名（フリガナ）"
+              >
+                <span
+                  class="value"
+                >
+                  HI
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        class="bg-disable border-top-sub border-bottom-sub ml-n3 mr-n3 pl-2 pr-3 pt-2 pb-2"
+      >
+        健康保険
+      </div>
+      <div
+        class="row"
+      >
+        <div
+          class="col-sm-12 border-bottom-sub"
+        >
+          <div
+            class="form-inline w-100 null"
+          >
+            <div
+              class="form-group w-100 line-info pl-0"
+            >
+              <div
+                class="control-label col-sm-4 p-0"
+              >
+                事業所整理番号
+              </div>
+              <div
+                class="col-sm-8 info-value"
+                data-js-label="事業所整理番号"
+              >
+                <span
+                  class="value"
+                >
+                  Test
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        class="bg-disable border-top-sub border-bottom-sub ml-n3 mr-n3 pl-2 pr-3 pt-2 pb-2"
+      >
+        厚生年金保険
+      </div>
+      <div
+        class="row"
+      >
+        <div
+          class="col-sm-12 border-bottom-sub"
+        >
+          <div
+            class="form-inline w-100 null"
+          >
+            <div
+              class="form-group w-100 line-info pl-0"
+            >
+              <div
+                class="control-label col-sm-4 p-0"
+              >
+                事業所番号
+              </div>
+              <div
+                class="col-sm-8 info-value"
+                data-js-label="事業所番号"
+              >
+                <span
+                  class="value"
+                >
+                  Test
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          class="col-sm-12 border-bottom-sub"
+        >
+          <div
+            class="form-inline w-100 null"
+          >
+            <div
+              class="form-group w-100 line-info pl-0"
+            >
+              <div
+                class="control-label col-sm-4 p-0"
+              >
+                事業所整理番号
+              </div>
+              <div
+                class="col-sm-8 info-value"
+                data-js-label="事業所整理番号"
+              >
+                <span
+                  class="value"
+                >
+                  Test
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        class="bg-disable border-top-sub border-bottom-sub ml-n3 mr-n3 pl-2 pr-3 pt-2 pb-2"
+      >
+        労災保険
+      </div>
+      <div
+        class="row"
+      >
+        <div
+          class="col-sm-12 border-bottom-sub"
+        >
+          <div
+            class="form-inline w-100 null"
+          >
+            <div
+              class="form-group w-100 line-info pl-0"
+            >
+              <div
+                class="control-label col-sm-4 p-0"
+              >
+                労働保険番号
+              </div>
+              <div
+                class="col-sm-8 info-value"
+                data-js-label="労働保険番号"
+              >
+                <span
+                  class="value"
+                >
+                  TEst
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        class="bg-disable border-top-sub border-bottom-sub ml-n3 mr-n3 pl-2 pr-3 pt-2 pb-2"
+      >
+        雇用保険
+      </div>
+      <div
+        class="row"
+      >
+        <div
+          class="col-sm-12 border-bottom-sub"
+        >
+          <div
+            class="form-inline w-100 null"
+          >
+            <div
+              class="form-group w-100 line-info pl-0"
+            >
+              <div
+                class="control-label col-sm-4 p-0"
+              >
+                事業所番号
+              </div>
+              <div
+                class="col-sm-8 info-value"
+                data-js-label="事業所番号"
+              >
+                <span
+                  class="value"
+                >
+                  100
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;

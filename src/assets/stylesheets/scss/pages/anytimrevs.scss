@@ -1,0 +1,609 @@
+$bg-gray-light: #fafafa;
+$bg-table-light: #e7f1fd;
+$bg-pink-light: #ffeeeb;
+$border-red-light: #f57575;
+$text-red: #d0021b;
+
+.anytimrevs-index {
+  position: relative;
+
+  table {
+    tr {
+      td {
+        .btn {
+          margin-top: 0px;
+        }
+        .btn + .btn {
+          margin-top: 2px;
+        }
+      }
+    }
+  }
+
+  .form-check-label {
+    font-size: 14px;
+    line-height: 21px;
+  }
+}
+
+.anytimrevs-new {
+  .warning {
+    height: 53px;
+    border-radius: 4px;
+    border: solid 2px $border-red-light;
+    background-color: $bg-pink-light;
+    padding: 16px;
+    color: $text-red;
+    font-weight: bolder;
+  }
+  .default-dropdown {
+    min-width: 320px !important;
+    max-width: 320px !important;
+
+    label, span, button {
+      font-size: $font-size-base;
+    }
+  }
+
+  .panel {
+    .panel-heading {
+      padding: 12px;
+    }
+
+    .panel-body {
+      p {
+        @extend .pt-2;
+        @extend .pl-2;
+        @extend .pr-2;
+        @extend .ml-1;
+      }
+
+      div.elements {
+        @extend .pl-2;
+        @extend .pr-2;
+        @extend .ml-1;
+      }
+
+      .overlay {
+        border: solid 1px $border-color;
+        border-left-width: 0;
+        border-right-width: 0;
+        background-color: $bg-gray-light;
+        height: 36px;
+        width: 100%;
+        margin-left: 0 !important;
+
+        span {
+          margin-left: 4px;
+        }
+      }
+    }
+  }
+
+  .panel + .panel {
+    margin-top: 32px;
+  }
+
+  .dropdown {
+    width: 100% !important;
+
+    .btn {
+      height: 32px;
+    }
+  }
+
+  .elements {
+    .label-suffix {
+      padding-top: 25px;
+      margin-bottom: 0;
+    }
+
+    span.label-suffix {
+      padding-top: 30px
+    }
+
+    .label-prefix {
+      padding-right: 12px;
+      padding-top: 10px;
+      display: inline-block;
+    }
+  }
+
+  .table-selectable {
+    th {
+      border: none;
+      vertical-align: middle;
+
+      & + th {
+        border-left: 1px solid $border-color;
+      }
+    }
+
+    td {
+      border: none;
+      border-top: 1px solid $border-color;
+
+      & + td {
+        border-left: 1px solid $border-color;
+      }
+    }
+  }
+
+  .input-for-error {
+    .form-control {
+      display: none;
+    }
+
+    .field-error {
+      padding: 10px 10px 5px 10px;
+      display: block;
+      border-top: 1px solid $border-color;
+    }
+  }
+
+  .dropdown-inline {
+    .default-dropdown {
+      label {
+        @extend .font-weight-bold;
+        @extend .d-inline-block;
+        padding-right: 12px
+      }
+    }
+  }
+}
+
+.anytimrevs-edit {
+  @extend .anytimrevs-new;
+}
+
+.anytimrevs-edit-report {
+  .is-target {
+    label {
+      margin-bottom: 0;
+    }
+  }
+
+  .grade {
+    span {
+      font-size: 14px;
+      line-height: 21px;
+      letter-spacing: 0.0729167px;
+      color: $gray;
+    }
+
+    .text-blue {
+      color: $link-color;
+    }
+
+    .text-red {
+      color: $text-red;
+    }
+  }
+
+  .btn-dropdown-default {
+    border: solid 1px $border-color !important;
+    background-image: linear-gradient(to bottom, $white, $border-color-sub) !important;
+    color: $gray !important;
+
+    &:after {
+      display: none;
+    }
+
+    &:disabled {
+      opacity: .5 !important;
+    }
+  }
+
+  .dropdown-actions {
+    .dropdown-item {
+      color: $gray !important;
+    }
+
+    .dropdown-menu {
+      min-width: 256px;
+    }
+  }
+
+  .table-selectable {
+    table-layout: fixed;
+
+    th,
+    td {
+      vertical-align: middle;
+      padding: 8px;
+    }
+
+    .custom-th {
+      width: 150px;
+      position: relative;
+
+      .custom-td {
+        &:nth-child(1),
+        &:nth-child(2),
+        &:nth-child(3) {
+          position: absolute;
+          bottom: 0;
+          height: 50%;
+        }
+
+        &:nth-child(1) {
+          top: 0;
+          bottom: auto;
+          left: 0;
+          border-bottom: 1px solid $border-color;
+        }
+
+        &:nth-child(2) {
+          left: 0;
+          border-right: 1px solid $border-color;
+        }
+
+        &:nth-child(3) {
+          right: 0;
+        }
+      }
+    }
+  }
+
+
+  .bg-gray {
+    background-color: rgba(231, 241, 253, 0.3);
+  }
+
+  .sub-title {
+    .grade {
+      span,
+      .text-blue,
+      .text-red {
+        color: inherit;
+      }
+    }
+  }
+}
+
+.anytimrevs-edit-employee {
+  .w-788 {
+    min-width: 656px !important;
+    max-width: 656px !important;
+  }
+
+  .info-value {
+    .default-dropdown {
+      &.small {
+        min-width: 60px;
+        max-width: 60px;
+      }
+      &.med {
+        min-width: 150px;
+        max-width: 150px;
+      }
+    }
+  }
+
+  .btn-lx {
+    width: 150px;
+  }
+
+  .target-salaries {
+    border: 1px solid $border-color;
+    border-bottom: none;
+
+    .field-error {
+      display: none;
+    }
+
+    .table {
+      td {
+        &:last-child {
+          border-right: none;
+        }
+      }
+
+      tr {
+        &:first-child {
+          th {
+            &:last-child {
+              border-right: none;
+            }
+          }
+        }
+
+        &:last-child {
+          td {
+            border-bottom: none;
+          }
+        }
+      }
+    }
+  }
+
+  .remark {
+    border: 1px solid $border-color;
+    border-top: none;
+    border-bottom-left-radius: 4px;
+    border-bottom-right-radius: 4px;
+  }
+
+  .hide-error {
+    .field-error {
+      display: none;
+    }
+  }
+}
+
+.width-70 {
+  width: 70px;
+}
+
+.anytime-employee-info {
+  .control-label {
+    font-weight: bold;
+  }
+}
+
+.anytime-remuneration-calculation-edit {
+  .alert {
+    margin: 12px 0 !important;
+  }
+}
+
+#employeeEdit-tabpane-monthlyChangeForm {
+  .w-788 {
+    min-width: auto !important;
+  }
+  .alert-box {
+    display: none;
+  }
+}
+
+.anytime-update-success-toast {
+  position: fixed;
+  top: 16px;
+  right: 20px;
+  width: 240px;
+  z-index: 9999;
+
+  .close {
+    color: $white;
+  }
+}
+
+.anytime-action-bar {
+  padding: 7px 8px 8px 16px;
+  background-color: $white;
+
+  .default-dropdown {
+    max-width: unset;
+    margin-bottom: 0;
+
+    > div {
+      display: flex;
+      align-items: center;
+    }
+
+    label {
+      font-size: 16px;
+      line-height: 24px;
+      color: $gray;
+      display: inline-block;
+      margin-right: 14px;
+    }
+
+    .btn-default {
+      min-width: 200px;
+    }
+  }
+}
+
+.modal-anytime-employee {
+  .modal-header {
+    display: none;
+  }
+}
+
+.table-selectable {
+  .table-header {
+    background-color: $bg-table-light;
+
+    th {
+      border-bottom: 0;
+    }
+  }
+
+  .selection-cell,
+  .selection-cell-header {
+    text-align: center;
+  }
+
+  .selection-cell-header {
+    width: 41px;
+  }
+
+  input[type=checkbox] {
+    position: relative;
+    border: none;
+
+    &::before {
+      width: 16px;
+      height: 16px;
+    }
+  }
+}
+
+.anytime-group-info-container {
+  .control-label {
+    font-weight: bold;
+  }
+}
+
+.anytime-action-bar {
+  padding: 7px 8px 8px 16px;
+  background-color: $white;
+
+  .default-dropdown {
+    max-width: unset;
+    margin-bottom: 0;
+
+    > div {
+      display: flex;
+      align-items: center;
+    }
+
+    label {
+      font-size: 16px;
+      line-height: 24px;
+      color: $gray;
+      display: inline-block;
+      margin-right: 14px;
+    }
+
+    .btn-default {
+      min-width: 200px;
+    }
+  }
+}
+
+.modal-anytime-employee {
+  .modal-header {
+    display: none;
+  }
+}
+
+.table-selectable {
+  .table-header {
+    background-color: $bg-table-light;
+
+    th {
+      border-bottom: 0;
+    }
+  }
+
+  .selection-cell,
+  .selection-cell-header {
+    text-align: center;
+  }
+
+  .selection-cell-header {
+    width: 41px;
+  }
+
+  input[type=checkbox] {
+    position: relative;
+    border: none;
+
+    &::before {
+      width: 16px;
+      height: 16px;
+    }
+  }
+}
+
+.anytime-import {
+  .border-right {
+    border-right: 1px solid #D4D8DD;
+  }
+
+  .border-left {
+    border-left: 1px solid #D4D8DD;
+  }
+
+  .p-col {
+    padding: 6px;
+  }
+
+  .btn-link {
+    text-decoration: none;
+    background: none;
+    outline: none;
+  }
+
+  .form-group {
+    &--file {
+      color: #3D79D0;
+      .form-control {
+        border: none;
+        display: none;
+      }
+
+      .default-input {
+        display: flex
+      }
+
+      label {
+        display: inline-flex;
+        min-width: 108px;
+        padding: 0 11px;
+        height: 24px;
+        align-items: center;
+        justify-content: center;
+        border-radius: 4px;
+        box-shadow: 0 1px 1px 0 rgba($black, 0.1);
+        border: solid 1px $border-color;
+        background-image: linear-gradient(to top, $white, $white 33%);
+        color: $gray;
+        cursor: pointer;
+        white-space: nowrap;
+      }
+    }
+  }
+
+  .form-check-label {
+    font-size: 14px;
+    line-height: 17px;
+  }
+
+  .finished {
+    .progress-bar {
+      color: #3B7DE9;
+    }
+  }
+}
+
+.anytime-import-modal {
+  .custom-table td:last-child {
+    border-right: none;
+  }
+
+  .custom-table td {
+    white-space: pre-line;
+  }
+
+  .column-hint {
+    font-size: 16px;
+    color: #7C8291;
+  }
+}
+
+.anytimrev-add-manual {
+  .field-group {
+    border-bottom: 1px solid $border-color;
+
+    .field-col {
+      width: calc(50% - 38px);
+      padding: 8px;
+
+      & + .field-col {
+        border-left: 1px solid $border-color;
+      }
+
+      .default-dropdown {
+        min-width: percentage(1);
+        max-width: percentage(1);
+        margin-bottom: 0;
+
+        .btn-default {
+          height: 32px;
+        }
+      }
+
+      &--btn {
+        width: 76px;
+        padding: 13px 0 0 0;
+      }
+    }
+  }
+
+  .bg-gray {
+    background-color: $bg-gray-light;
+  }
+}

@@ -1,0 +1,18 @@
+
+.status {
+  padding: 4px 12px;
+  height: 24px;
+  // line-height: 22px;
+  font-size: 12px !important;
+  color: $white;
+
+  &-black {
+    border: solid 1px #999999;
+    background-color: #999999;
+  }
+
+  &-green {
+    border: solid 1px #72cc58;
+    background-color: #72cc58;
+  }
+}

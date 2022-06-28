@@ -1,0 +1,237 @@
+.btn-lg, .btn-group-lg > .btn {
+  padding: 0;
+}
+
+.btn {
+  width: 61px;
+  height: 32px;
+  height: 32px;
+  border: solid 1px $border-color;
+
+  &:hover {
+    border-color: $border-color !important;
+    opacity: 0.8;
+
+    &:disabled{
+      opacity: 0.5;
+    }
+  }
+
+  &.disabled,
+  &:disabled{
+    opacity: 0.5;
+  }
+
+  &.width-80 {
+    width: 80px;
+  }
+
+  &.width-81 {
+    width: 81px;
+  }
+}
+
+@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+  .btn {
+    background-color: transparent;
+    padding-top: 8px;
+  }
+
+  .btn-sm {
+    padding-top: 6px;
+  }
+
+  .btn-lg {
+    padding-top: 6px;
+  }
+
+  .btn-h-m {
+    padding-top: 10px;
+  }
+}
+
+.btn-modal {
+  height: 44px;
+  width: 128px
+}
+
+.btn-h-m {
+  height: 44px !important;
+}
+
+.btn-h-s {
+  height: 28px !important;
+  height: 28px;
+}
+
+.btn-sm {
+  width: 53px !important;
+  height: 28px;
+}
+
+.btn-lg {
+  width: 75px !important;
+}
+
+.btn-auto {
+  width: auto !important;
+  padding: 0 16px 0 16px;
+}
+
+.btn-lg-x {
+  width: 240px !important;
+}
+
+.btn-lg-xx {
+  width: 316px !important;
+}
+
+.btn-postal {
+  width: 90px !important;
+}
+
+.btn-pad {
+  padding: 5px 16px;
+  min-width: max-content;
+  width: auto;
+}
+
+.btn-submit {
+  height: 32px !important;
+  padding: 0 16px;
+  width: auto;
+}
+
+.btn-primary {
+  border: solid 1px #3B7DE9 !important;
+  background-image: linear-gradient(to bottom, #3b7de9, #0054ac 100%) !important;
+
+  &:hover {
+    border: solid 1px #3B7DE9 !important;
+  }
+
+  &:focus {
+    outline: none;
+    -webkit-box-shadow: 0px 0px 0px 2px rgba(59, 125, 233, 0.3);
+    -moz-box-shadow: 0px 0px 0px 2px rgba(59, 125, 233, 0.3);
+    box-shadow: 0px 0px 0px 2px rgba(59, 125, 233, 0.3);
+  }
+}
+
+.btn-danger {
+  background-color: transparent;
+  color: #d0021b;
+  background-image: linear-gradient(to bottom, #ffffff, $border-color-sub);
+
+  &:hover {
+    background-color: transparent;
+    color: #d0021b;
+    opacity: 0.5;
+  }
+
+  &:focus,
+  &.focus {
+    border-color: #d4d8dd;
+    color: #d0021b !important;
+  }
+
+  &:disabled{
+    opacity: 0.5;
+    color: #d0021b;
+    background-image: linear-gradient(to bottom, #ffffff, $border-color-sub);
+    background-color: $border-color-sub;
+    border: solid 1px #d4d8dd;
+  }
+
+  @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+    background-color: transparent !important;
+  }
+}
+
+.btn-default {
+  background-image: linear-gradient(to bottom, #ffffff, $border-color-sub);
+  color: $gray;
+}
+
+.btn-disabled {
+  opacity: 0.5;
+  cursor: auto !important;
+
+  &:hover {
+    opacity: 0.5;
+  }
+}
+
+.btn-light {
+  &:disabled,
+  &.disabled {
+    border-color: #d4d8dd;
+  }
+}
+
+.btn + .btn {
+  margin-left: 16px;
+}
+
+.glyphicon {
+  position: absolute;
+  right: 16px;
+  border: solid 1px $border-color;
+  border-radius: 0 0 4px 4px;
+  border-top: none;
+  top: -1px;
+  width: 133px;
+  height: 36px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+  padding: 8px;
+
+  &:hover {
+    border-top: none;
+    opacity: 1;
+  }
+}
+
+.glyphicon::after {
+  position: absolute;
+  right: 10px;
+  top: 16px;
+  // border-bottom: 0.3em solid #7c8291;
+  display: inline-block;
+  margin-left: 0.255em;
+  vertical-align: 0.255em;
+  content: "";
+  border-right: 0.3em solid transparent;
+  border-left: 0.3em solid transparent;
+}
+
+.glyphicon.hide::after {
+  border-bottom: 0.3em solid #7c8291;
+}
+
+.glyphicon.collapsed::after {
+  border-top: 0.3em solid #7c8291;
+}
+
+.btn.switch-office {
+  border: solid 1px #3B7DE9 !important;
+  background-image: linear-gradient(to bottom, #3b7de9, #0054ac 100%) !important;
+  color: #fff !important;
+}
+
+.btn-withdraw {
+  border: solid 1px #d4d8dd;
+  background-image: linear-gradient(to bottom, #ffffff, #eff1f4);
+  width: 89px;
+
+  &:hover {
+    color: #d0021b !important;
+    cursor: default;
+  }
+}
+.help-aggregate-button.svg-inline--fa {
+  color: #3B7DE9;
+  cursor: pointer;
+}

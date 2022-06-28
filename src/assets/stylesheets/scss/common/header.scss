@@ -1,0 +1,160 @@
+.announcement-badges {
+  cursor: pointer;
+  .show{
+    max-height: 560px;
+  }
+
+  .dropdown-item{
+    width: 300px;
+    display: block;
+    margin: 2px;
+    height: auto;
+    white-space: pre-line;
+    padding-right: 13px !important;
+
+    &:last-child{
+      margin-top: 8px ;
+    }
+
+    .announcement-date{
+      font-family: Roboto;
+      font-size: 12px !important;
+      color: #999999;
+    }
+
+    .announcement-content{
+      font-family: "Noto Sans JP";
+      color: black;
+    }
+  }
+}
+
+
+.question-circle{
+  cursor: pointer;
+}
+
+
+.notification-badges{
+  cursor: pointer;
+  [data-badge] {
+    position:relative;
+    &:after {
+      pointer-events: none;
+      position: absolute;
+      right: -2px;
+      top: -1px;
+      width: 8px;
+      height: 8px;
+      color: #fff;
+      background-color: #d0021b;
+      border-radius: 50%;
+      content: attr(data-badge);
+    }
+  }
+  .show{
+    max-height: 560px;
+  }
+
+  .dropdown-item{
+    width: 300px;
+    display: block;
+    margin: 2px;
+    height: auto;
+    white-space: pre-line;
+    padding-right: 13px !important;
+
+    &:last-child{
+      margin-top: 8px ;
+    }
+  }
+
+
+  .notification-title{
+    font-family: "Noto Sans JP";
+    font-size: 12px !important;
+    color: #999999 !important;
+  }
+
+  .notification-content{
+    font-family: "Noto Sans JP";
+    color: black;
+  }
+  [data-read="false"]{
+    font-weight: bold;
+  }
+}
+
+.plan-state {
+  margin-right: 20px;
+
+  .dropdown-toggle {
+    font-size: 12px;
+    font-weight: bold;
+    line-height: 1.5;
+    letter-spacing: 0.25px;
+
+    &.btn-primary {
+      background: none !important;
+      border: none !important;
+      background-color: $blue !important;
+      color: $white !important;
+      padding: 0 12px;
+      height: 24px;
+      border-radius: 4px;
+
+      &:focus {
+        box-shadow: none;
+      }
+    }
+  }
+
+  .dropdown-menu {
+    border-radius: 4px;
+    box-shadow: 1px 2px 4px 0 rgba($black, 0.3);
+    padding: 19px 16px 16px 16px;
+    min-width: 250px;
+    font-size: 14px;
+    line-height: 21px;
+    letter-spacing: 0.07px;
+    color: $gray-sub;
+
+    .desc {
+      margin-bottom: 9px;
+
+      p {
+        font-size: 14px;
+        margin-top: 3px;
+        margin-bottom: 0;
+
+        &:first-child {
+          margin-top: 0;
+        }
+      }
+    }
+
+    .link {
+      color: $blue;
+      font-weight: bold;
+      padding: 0;
+      margin: 0;
+      border: none;
+      background: none;
+      outline: none;
+
+      &:hover {
+        background: none;
+      }
+    }
+  }
+
+  &--no-billing {
+    .dropdown-toggle {
+      pointer-events: none;
+
+      &:after {
+        display: none;
+      }
+    }
+  }
+}

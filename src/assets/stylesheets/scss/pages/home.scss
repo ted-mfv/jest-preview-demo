@@ -1,0 +1,228 @@
+.home-page {
+  .part-header {
+    font-size: 16px;
+  }
+  td {
+    padding: 4px 0;
+
+    &.date-column {
+      width: 80px;
+    }
+
+    &.announcement-column {
+      padding-left: 6px;
+    }
+  }
+
+  .more-announcements {
+    font-size: 12px;
+  }
+
+  .text-light-gray {
+    color: $gray-sub;
+  }
+  .icon-size-16 {
+    font-size: 16px;
+  }
+  .phone-number {
+    font-size: 16px;
+    font-weight: bold;
+  }
+  .support-time {
+    padding-left: 2.15rem;
+  }
+}
+
+.procedure-box {
+  width: 486px;
+  height: 541px;
+  box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.2);
+  background-color: #ffffff;
+
+  .sub-text {
+    color: #999999;
+  }
+
+  .panel-header {
+    min-height: 180px;
+    max-height: 180px;
+    padding-top: 34px;
+
+    .info {
+      height: 68px;
+      display: flex;
+      align-items: center;
+      margin: auto;
+      width: 100%;
+
+      .icon-box, .txt-box, .total-box {
+        height: 68px;
+        display: flex;
+        align-items: center;
+      }
+
+      .icon-box {
+        width: 64px;
+        display: flex;
+        justify-content: flex-end;
+
+        svg {
+          fill: #c2d1fc;
+        }
+      }
+
+      .txt-box {
+        margin-left: 16px;
+        width: 68px;
+        border-right: 1px solid #d4d8dd;
+      }
+
+      .total-box {
+        width: 168px;
+        display: flex;
+        flex-wrap: inherit;
+        align-items: baseline;
+        position: relative;
+
+        p {
+          width: 100%;
+          text-align: center;
+          margin: 0px;
+        }
+
+        .date {
+          font-size: 10px;
+          width: 168px;
+          top: 24px;
+          cursor: pointer;
+        }
+
+        .amount {
+          font-size: 32px;
+          font-weight: bold;
+          letter-spacing: 0.17px;
+          color: #3d79d0;
+          margin: 0;
+          line-height: 1;
+        }
+
+        @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+          .amount {
+            line-height: normal;
+          }
+        }
+      }
+    }
+
+    .button-group {
+      margin-top: 46px;
+      padding-bottom: 8px;
+      padding-left: 16px;
+
+      button {
+        padding: 0;
+        width: 68px;
+        height: 24px;
+        line-height: 24px;
+        border-radius: 15px;
+        background-color: #eff1f4 !important;
+        font-size: 12px;
+        font-weight: bold;
+        border: none;
+
+        @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+          padding-top: 2px;
+        }
+
+        &:hover {
+          color: #3b7de9;
+          background-color: #ffffff;
+        }
+      }
+
+      button.active {
+        background-color: #3d79d0 !important;
+        color: $white;
+
+        &:hover {
+          background-color: #3d79d0 !important;
+          color: $white;
+        }
+      }
+
+      button + button {
+        margin-left: 8px;
+      }
+
+      .btn-link {
+        border: none;
+        width: auto;
+        float: right;
+        margin-right: 16px;
+      }
+    }
+  }
+
+  .procedure-item {
+    padding-top: 4px !important;
+    padding-bottom: 4px  !important;
+    height: 51px;
+    display: flex;
+    align-items: center;
+
+    span {
+      margin: 0;
+    }
+
+    .date, .employee, .icon {
+      line-height: 21px;
+    }
+
+    .name {
+      width: 88px;
+      text-align: center;
+      border-right: 1px solid #eff1f4;
+      height: 41px;
+      line-height: 41px;
+    }
+
+    .date {
+      width: 64px;
+      font-size: 12px;
+      letter-spacing: 0.06px;
+      color: #999999;
+      margin: 0 8px 0 8px;
+    }
+
+    .employee {
+      width: 267px;
+      font-size: 14px;
+      letter-spacing: 0.07px;
+    }
+
+    .icon {
+      width: 48px;
+      text-align: center;
+    }
+
+    &:hover {
+      background-color: rgba(231, 241, 253, 0.3);
+      cursor: pointer;
+    }
+  }
+}
+
+.home-box {
+  width: 486px;
+  height: 245px;
+  box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.2);
+  background-color: #ffffff;
+}
+
+.offices-submitters-new {
+  .has-error {
+    input {
+      border-color: $red !important;
+    }
+  }
+}

@@ -1,0 +1,45 @@
+@import "../../scss/variables/variables";
+
+.progress {
+  display: flex;
+  height: auto;
+  overflow: hidden;
+  font-size: 0.75rem;
+  border-radius: 20px;
+  border: 6px $border-color solid;
+  width: 158px;
+  height: 32px;
+  border-radius: 16px;
+  background-color: $border-color;
+
+  &-bar {
+    color: #999999;
+    font-size: $font-size-sm;
+    background-color: $white;
+    height: 20px;
+    font-weight: bold;
+    line-height: 1.5;
+  }
+}
+
+.progress-group {
+  display: flex;
+  // align-items: center;
+  // justify-content: flex-end;
+
+  .progress {
+    margin-right: 10px;
+  }
+
+  .progress + .status {
+    &:before {
+      margin-left: 8px;
+    }
+  }
+}
+
+.has-done.progress {
+  .progress-bar {
+    color: #3b7de9 !important;
+  }
+}

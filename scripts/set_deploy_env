@@ -1,0 +1,81 @@
+#!/bin/bash
+
+set -x
+
+#forApp
+echo 'export ECS_CLUSTER="si2"' >> $BASH_ENV
+echo 'export APP_NAME="si_web"' >> $BASH_ENV
+echo 'export ECS_SERVICE="si"' >> $BASH_ENV
+echo 'export AWS_REGION="ap-northeast-1"' >> $BASH_ENV
+
+#variables only use for heroku test
+echo 'REACT_APP_MFID_PROXY_SECRET_KEY=empty' >> .env
+echo 'REACT_APP_MFID_PROXY_URL_CALLBACK=empty' >> .env
+
+# variables for COVERALLS
+# https://github.com/nickmerwin/node-coveralls#usage
+echo "export COVERALLS_SERVICE_NAME=CIRCLE_CI" >> $BASH_ENV
+echo "export COVERALLS_GIT_BRANCH=${CIRCLE_BRANCH}" >> $BASH_ENV
+echo "export COVERALLS_SERVICE_NUMBER=${CIRCLE_BUILD_NUM}" >> $BASH_ENV
+echo "export COVERALLS_SERVICE_JOB_ID=${CIRCLE_BUILD_NUM}" >> $BASH_ENV
+echo "export COVERALLS_SERVICE_JOB_NUMBER=${CIRCLE_BUILD_NUM}" >> $BASH_ENV
+
+if [ "${ENVIRONMENT}" == "production" ]; then
+  #forApp
+  echo 'REACT_APP_ENV=production' >> .env
+  echo 'REACT_APP_API_URL=https://social-insurance.moneyforward.com/api/v1' >> .env
+  echo 'REACT_APP_API_URL_V2=https://social-insurance.moneyforward.com/api/v2' >> .env
+  echo 'REACT_APP_MFID_SITE=https://id.moneyforward.com' >> .env
+  echo 'REACT_APP_REDIRECT_URI=https://social-insurance.moneyforward.com/users/auth/mfid/callback' >> .env
+  echo "REACT_APP_MFID_CLIENT_ID=${REACT_APP_MFID_CLIENT_ID_PRODUCTION}" >> .env
+  echo 'REACT_APP_ERP_LINK=https://erp.moneyforward.com' >> .env
+  echo "REACT_APP_PAYROLL_LINK=https://payroll.moneyforward.com" >> .env
+  echo "REACT_APP_NAVIS_LINK=https://biz-admin.moneyforward.com" >> .env
+  echo "REACT_APP_ZENDESK_SUPPORT_FORM_URL=https://mfccs.zendesk.com/hc/ja/requests/new?ticket_form_id=360002849493" >> .env
+  echo "REACT_APP_ZENDESK_CHAT_API_KEY=${REACT_APP_ZENDESK_CHAT_API_KEY_PRODUCTION}" >> .env
+  echo "REACT_APP_ZENDESK_CHAT_APPARTMENTS=9-01　初期設定時の質問,9-02　機能についての質問・要望,9-03　料金についての質問,9-04　その他の質問">> .env
+  echo "REACT_APP_GTM_ID=${REACT_APP_GTM_ID_PRODUCTION}" >> .env
+  echo "REACT_APP_ROLLBAR_ACCESS_TOKEN=${REACT_APP_ROLLBAR_ACCESS_TOKEN_PRODUCTION}" >> .env
+  echo "REACT_APP_DEMO_EGOV_TOKEN=${REACT_APP_DEMO_EGOV_TOKEN_PRODUCTION}" >> .env
+  #forTask
+  echo 'export RESERVED_CPU_UNIT=512' >> $BASH_ENV
+  echo 'export RESERVED_MEMORY=1024' >> $BASH_ENV
+  #forAWS
+  echo 'export AWS_ACCESS_KEY_ID="${AWS_ACCESS_KEY_ID_PRODUCTION}"' >> $BASH_ENV
+  echo 'export AWS_SECRET_ACCESS_KEY="${AWS_SECRET_ACCESS_KEY_PRODUCTION}"' >> $BASH_ENV
+  echo 'export CLOUDFRONT_DISTRIBUTION_ID="${CLOUDFRONT_DISTRIBUTION_ID_PRODUCTION}"' >> $BASH_ENV
+  echo 'export ECR_AWS_ACCOUNT_ID="${ECR_AWS_ACCOUNT_ID_PRODUCTION}"' >> $BASH_ENV
+  ###
+elif [ "${ENVIRONMENT}" == "staging" ]; then
+  #for ApiUrl
+  if [ "${SUFFIX}" == "_test" ]; then
+    echo 'REACT_APP_API_URL=https://test.si.mfvn.dev/api/v1' >> .env
+    echo 'REACT_APP_API_URL_V2=https://test.si.mfvn.dev/api/v2' >> .env
+    echo 'REACT_APP_REDIRECT_URI=https://test.si.mfvn.dev/users/auth/mfid/callback' >> .env
+  else
+    echo 'REACT_APP_API_URL=https://si.mfvn.dev/api/v1' >> .env
+    echo 'REACT_APP_API_URL_V2=https://si.mfvn.dev/api/v2' >> .env
+    echo 'REACT_APP_REDIRECT_URI=https://si.mfvn.dev/users/auth/mfid/callback' >> .env
+  fi
+  #for MFID
+  echo 'REACT_APP_ERP_LINK=https://erp-stg1.ebisubook.com' >> .env
+  echo 'REACT_APP_ENV=staging' >> .env
+  echo "REACT_APP_MFID_CLIENT_ID=${REACT_APP_MFID_CLIENT_ID_STAGING}" >> .env
+  echo 'REACT_APP_MFID_SITE=https://id.test.mfw.work' >> .env
+  echo "REACT_APP_PAYROLL_LINK=https://payroll.ebisubook.co.in" >> .env
+  echo "REACT_APP_NAVIS_LINK=https://biz-admin.test.mfw.work" >> .env
+  echo "REACT_APP_ZENDESK_SUPPORT_FORM_URL=https://mfccs1542700050.zendesk.com/hc/ja/requests/new?ticket_form_id=360002787074" >> .env
+  echo "REACT_APP_ZENDESK_CHAT_API_KEY=${REACT_APP_ZENDESK_CHAT_API_KEY_STAGING}" >> .env
+  echo "REACT_APP_ZENDESK_CHAT_APPARTMENTS=9-01　初期設定時の質問,9-02　機能についての質問・要望,9-03　料金についての質問,9-04　その他の質問">> .env
+  echo "REACT_APP_GTM_ID=GTM-MSM3QVZ" >> .env
+  echo "REACT_APP_ROLLBAR_ACCESS_TOKEN=${REACT_APP_ROLLBAR_ACCESS_TOKEN_STAGING}" >> .env
+  echo "REACT_APP_DEMO_EGOV_TOKEN=${REACT_APP_DEMO_EGOV_TOKEN_STAGING}" >> .env
+  #forTask
+  echo 'export RESERVED_CPU_UNIT=512' >> $BASH_ENV
+  echo 'export RESERVED_MEMORY=1024' >> $BASH_ENV
+  #forAWS
+  echo 'export AWS_ACCESS_KEY_ID="${AWS_ACCESS_KEY_ID_STAGING}"' >> $BASH_ENV
+  echo 'export AWS_SECRET_ACCESS_KEY="${AWS_SECRET_ACCESS_KEY_STAGING}"' >> $BASH_ENV
+  echo 'export CLOUDFRONT_DISTRIBUTION_ID="${CLOUDFRONT_DISTRIBUTION_ID_STAGING}"' >> $BASH_ENV
+  echo 'export ECR_AWS_ACCOUNT_ID="${ECR_AWS_ACCOUNT_ID_STAGING}"' >> $BASH_ENV
+fi

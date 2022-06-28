@@ -1,0 +1,183 @@
+// Base class
+//
+// Kickstart any navigation component with a set of style resets. Works with
+// `<nav>`s or `<ul>`s.
+
+.nav {
+  display: flex;
+  flex-wrap: wrap;
+  padding-left: 0;
+  margin-bottom: 0;
+  list-style: none;
+}
+
+.nav-link {
+  display: block;
+  padding: $nav-link-padding-y $nav-link-padding-x;
+
+  @include hover-focus {
+    text-decoration: none;
+  }
+
+  // Disabled state lightens text
+  &.disabled {
+    color: $nav-link-disabled-color;
+    pointer-events: none;
+    cursor: default;
+  }
+}
+
+//
+// Tabs
+//
+
+.nav-tabs {
+  border-bottom: 1px solid #d4d8dd;
+
+  .nav-link {
+    border: 0;
+    color: $gray !important;
+    border-bottom: 1px solid #d4d8dd;
+
+    @include hover-focus {
+      border: 0;
+      color: $link-color !important;
+      text-decoration: none !important;
+      border-bottom: 2px solid $link-color;
+    }
+
+    &.disabled {
+      color: $nav-link-disabled-color;
+      background-color: transparent;
+      border-color: transparent;
+    }
+  }
+
+  .nav-link.active,
+  .nav-item.show .nav-link {
+    color: $gray !important;
+    background: none;
+    border: 0;
+    border-bottom: 2px solid $link-color;
+    text-decoration: none !important;
+
+    @include hover-focus {
+      padding-bottom: 8px !important;
+    }
+  }
+
+  .nav-link.active {
+    color: #666666 !important;
+  }
+
+  .dropdown-menu {
+    // Make dropdown border overlap tab border
+    margin-top: -$nav-tabs-border-width;
+    // Remove the top rounded corners here since there is a hard edge above the menu
+    @include border-top-radius(0);
+  }
+
+  a {
+    color: $gray;
+  }
+}
+
+
+//
+// Pills
+//
+
+.nav-pills {
+  .nav-link {
+    @include border-radius($nav-pills-border-radius);
+  }
+
+  .nav-link.active,
+  .show > .nav-link {
+    color: $nav-pills-link-active-color;
+    background-color: $nav-pills-link-active-bg;
+  }
+}
+
+
+//
+// Justified variants
+//
+
+.nav-fill {
+  .nav-item {
+    flex: 1 1 auto;
+    text-align: center;
+  }
+}
+
+.nav-justified {
+  .nav-item {
+    flex-basis: 0;
+    flex-grow: 1;
+    text-align: center;
+  }
+}
+
+
+// Tabbable tabs
+//
+// Hide tabbable panes to start, show them when `.active`
+
+.tab-content {
+  > .tab-pane {
+    display: none;
+  }
+  > .active {
+    display: block;
+  }
+
+  .has-search-form {
+    padding: 0 !important;
+  }
+}
+
+.navbar {
+  padding: 0.5rem 1rem;
+}
+
+.navbar-nav {
+  align-items: center;
+
+  .nav-item + .nav-item {
+    margin-left: 20px;
+  }
+
+  .nav-item {
+    .dropdown {
+      .btn {
+        border: none;
+        align-items: center;
+        color: rgba(0, 0, 0, 0.5);
+      }
+
+      .dropdown-menu {
+        .dropdown-item {
+          padding: 7.5px 0 7.5px 13px;
+          min-width: 236px;
+          color: $gray;
+
+          &:hover {
+            color: #3d79d0;
+            background-color: inherit;
+          }
+        }
+
+        .active {
+          background-color: #3d79d0;
+        }
+
+        .switch-office-item {
+          &.active {
+            background-color: transparent;
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,523 @@
+// for regular-revision
+
+.regular-revision-new {
+  @extend .join-company-new;
+
+  .spacing-input {
+    .form-control {
+      padding-left: 8px;
+    }
+  }
+
+  .panel {
+    .panel-heading {
+      padding: 12px;
+    }
+    .panel-body {
+      p {
+        @extend .pt-2;
+        @extend .pl-2;
+        @extend .pr-2;
+        @extend .ml-1;
+      }
+      div.elements {
+        @extend .pl-2;
+        @extend .pr-2;
+        @extend .ml-1;
+      }
+    }
+  }
+
+  .elements {
+    .label-suffix {
+      padding-top: 25px;
+      margin-bottom: 0;
+    }
+
+    span.label-suffix {
+      padding-top: 30px
+    }
+  }
+
+  .select-group-container {
+    margin-left: 12px;
+    .default-dropdown {
+      margin: 0
+    }
+  }
+
+  .table-selectable {
+    th {
+      border: none;
+      vertical-align: middle;
+      & + th {
+        border-left: 1px solid #D4D8DD;
+      }
+    }
+    td {
+      border: none;
+      border-top: 1px solid #D4D8DD;
+      & + td {
+        border-left: 1px solid #D4D8DD;
+      }
+    }
+  }
+
+  .input-for-error {
+    .form-control {
+      display: none;
+    }
+
+    .field-error {
+      padding: 10px 10px 5px 10px;
+      display: block;
+      border-top: 1px solid #d4d8dd;
+    }
+  }
+}
+
+.regular-revision-edit {
+  .w-788 {
+    min-width: 656px !important;
+    max-width: 656px !important;
+  }
+
+  font-size: 0.875rem;
+
+  .item-pb-10 {
+    .form-check {
+      padding-bottom: 10px;
+    }
+  }
+
+  .wide-tile.line-info {
+    align-items: flex-start;
+    .col-sm-3 {
+      min-width: 35% !important;
+    }
+
+    .col-sm-9 {
+      max-width: 65% !important;
+    }
+  }
+  .bg-color-gray {
+    background-color: #fafafa;
+  }
+  .table-bordered {
+    th:last-child,
+    td:last-child {
+      border-right: none;
+    }
+    th:first-child,
+    td:first-child {
+      border-left: none;
+    }
+    td {
+      vertical-align: middle;
+    }
+    .info-value input {
+      min-width: unset;
+    }
+    .input-width-32 {
+      input {
+        width: 32px;
+      }
+    }
+    .input-width-80 {
+      input {
+        width: 80px;
+      }
+    }
+    .input-width-550 {
+      input {
+        width: 550px;
+      }
+    }
+    .input-width-140 {
+      input {
+        width: 140px;
+      }
+    }
+    .input-width-160 {
+      input {
+        width: 160px;
+      }
+    }
+    .input-width-120 {
+      input {
+        width: 120px;
+      }
+    }
+    .default-dropdown {
+      .input-width-80 {
+        width: 80px;
+      }
+    }
+    .default-dropdown-mr-0 {
+      .default-dropdown {
+        margin-right: 0px;
+      }
+    }
+    .input-center {
+      input {
+        text-align: center;
+        padding-left: 0;
+      }
+    }
+
+  }
+  .justify-content-start.form-check {
+    padding-left: 5px;
+    padding-right: 5px;
+  }
+  .contract-type .justify-content-start.form-check {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+  .has_contract_period .default-dropdown {
+    width: 210px !important;
+  }
+  .month-block {
+    span {
+      margin-right: 15px;
+    }
+
+    .default-dropdown {
+      &.small {
+        min-width: 80px !important;
+        max-width: 80px !important;
+      }
+
+      &.custom-control-inline {
+        margin-right: 3px;
+        div {
+          width: 100%;
+        }
+      }
+    }
+  }
+
+  .remove-icon {
+    cursor: pointer;
+    :hover {
+      color: red;
+    }
+  }
+
+  .info-value {
+    .default-dropdown {
+      &.small {
+        min-width: 60px;
+        max-width: 60px;
+      }
+      &.med {
+        min-width: 150px;
+        max-width: 150px;
+      }
+    }
+  }
+
+  .btn-lx {
+    width: 150px;
+  }
+
+  .rr-summary-salary-pay {
+    .unit-absolute {
+      position: unset;
+      top: unset;
+      right: unset;
+      margin-left: 5px;
+      font-weight: unset;
+    }
+  }
+  .none-min-height {
+    min-height: unset !important;
+  }
+}
+
+.regular-revision-basic-setting {
+  .panel {
+    .panel-heading {
+      padding: 12px;
+    }
+    .panel-body {
+      p {
+        @extend .pt-2;
+        @extend .pl-2;
+        @extend .pr-2;
+        @extend .ml-1;
+      }
+      div.elements {
+        @extend .pl-2;
+        @extend .pr-2;
+        @extend .ml-1;
+      }
+    }
+  }
+
+  .elements {
+    .label-suffix {
+      padding-top: 25px;
+      margin-bottom: 0;
+    }
+
+    span.label-suffix {
+      padding-top: 30px
+    }
+  }
+
+  .select-group-container {
+    margin-left: 12px;
+    .default-dropdown {
+      margin: 0;
+      min-width: 280px;
+      max-width: 280px;
+
+      .dropdown{
+        width: 100% !important;
+      }
+    }
+  }
+
+  .table-selectable {
+    th {
+      border: none;
+      vertical-align: middle;
+      & + th {
+        border-left: 1px solid #D4D8DD;
+      }
+    }
+    td {
+      border: none;
+      border-top: 1px solid #D4D8DD;
+      & + td {
+        border-left: 1px solid #D4D8DD;
+      }
+    }
+  }
+
+  .input-for-error {
+    .form-control {
+      display: none;
+    }
+
+    .field-error {
+      padding: 10px 10px 5px 10px;
+      display: block;
+      border-top: 1px solid #d4d8dd;
+    }
+  }
+}
+
+.regular-remuneration-calculation {
+  .paging {
+    .pagination {
+      width: auto;
+    }
+  }
+
+  .btn-dropdown-default {
+    border: solid 1px $border-color !important;
+    background-image: linear-gradient(to bottom, white, $border-color-sub) !important;
+    color: $gray !important;
+
+    &:after {
+      display: none;
+    }
+
+    &:disabled {
+      opacity: .5 !important;
+    }
+  }
+
+  .dropdown-item {
+    color: $gray !important;
+  }
+
+  .table-selectable {
+    table-layout: fixed;
+    th,
+    td {
+      vertical-align: middle;
+      padding: 8px;
+      word-break: break-all;
+    }
+
+    .custom-th {
+      position: relative;
+
+      .custom-td {
+        &:nth-child(1),
+        &:nth-child(2),
+        &:nth-child(3) {
+          position: absolute;
+          bottom: 0;
+          height: 50%;
+        }
+
+        &:nth-child(1) {
+          top: 0;
+          bottom: auto;
+          left: 0;
+          border-bottom: 1px solid $border-color;
+        }
+
+        &:nth-child(2) {
+          left: 0;
+          border-right: 1px solid $border-color;
+        }
+
+        &:nth-child(3) {
+          right: 0;
+        }
+      }
+    }
+
+    .grade {
+      span {
+        font-size: 14px;
+        line-height: 21px;
+        letter-spacing: 0.0729167px;
+        color: $gray;
+      }
+
+      .text-blue {
+        color: $blue;
+      }
+
+      .text-red {
+        color: $red;
+      }
+    }
+  }
+
+  .caret {
+    color: $gray-600;
+    display: inline-block;
+    width: 0;
+    height: 0;
+    margin-left: 2px;
+    vertical-align: middle;
+    border-top: 4px dashed;
+    border-top: 4px solid \9;
+    border-right: 4px solid transparent;
+    border-left: 4px solid transparent;
+  }
+
+  .dropup .caret, .navbar-fixed-bottom .dropdown .caret {
+    border-top: 0;
+    border-bottom: 4px dashed;
+    border-bottom: 4px solid \9;
+    content: "";
+  }
+}
+
+.regular-remuneration-calculation-edit {
+  .alert {
+    margin: 0 !important;
+  }
+
+  .content-checkbox {
+    .form-check {
+      display: none;
+    }
+  }
+
+  .target-salaries {
+    .field-error {
+      display: none;
+    }
+  }
+
+  .remark-heading {
+    padding: 5.5px 12px 5.5px 12px;
+    min-height: 44px;
+    background-color: #fafafa;
+  }
+
+  .calculate-salary-btn {
+    width: 150px;
+  }
+}
+
+.regular-import {
+  .border-right {
+    border-right: 1px solid #D4D8DD;
+  }
+
+  .border-left {
+    border-left: 1px solid #D4D8DD;
+  }
+
+  .p-col {
+    padding: 6px;
+  }
+
+  .btn-link {
+    text-decoration: none;
+    background: none;
+    outline: none;
+  }
+
+  .form-group {
+    &--file {
+      color: #3D79D0;
+      .form-control {
+        border: none;
+        display: none;
+      }
+
+      .default-input {
+        display: flex
+      }
+
+      label {
+        display: inline-flex;
+        min-width: 108px;
+        padding: 0 11px;
+        height: 24px;
+        align-items: center;
+        justify-content: center;
+        border-radius: 4px;
+        box-shadow: 0 1px 1px 0 rgba($black, 0.1);
+        border: solid 1px $border-color;
+        background-image: linear-gradient(to top, $white, $white 33%);
+        color: $gray;
+        cursor: pointer;
+        white-space: nowrap;
+      }
+    }
+  }
+
+  .form-check-label {
+    font-size: 14px;
+    line-height: 17px;
+  }
+
+  .finished {
+    .progress-bar {
+      color: #3B7DE9;
+    }
+  }
+}
+
+.regular-import-modal {
+  .custom-table td:last-child {
+    border-right: none;
+  }
+
+  .custom-table td {
+    white-space: pre-line;
+  }
+
+  .column-hint {
+    font-size: 16px;
+    color: #7C8291;
+  }
+}
+
+.regular-revision-index {
+  .form-check-label {
+    font-size: $font-size-base;
+  }
+}

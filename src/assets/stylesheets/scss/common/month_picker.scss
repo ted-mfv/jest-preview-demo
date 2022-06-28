@@ -1,0 +1,147 @@
+$calendar-cell-padding: .75em !default;
+$calendar-cell-bg-select: #569FF7 !default;
+$calendar-cell-bg-focus: none !default;
+$calendar-border: #c5cbcf;
+
+@import '~react-widgets/lib/scss/react-widgets';
+
+.rw-datetime-picker{
+
+  &.rw-state-disabled {
+    cursor: default;
+    .rw-widget-picker.rw-widget-container {
+      cursor: default;
+      .rw-widget-input.rw-input {
+        cursor: default;
+      }
+
+      .rw-select.rw-select-bordered {
+        background: transparent;
+      }
+    }
+  }
+
+  .small > & {
+    font-size: 12px;
+    position: relative;
+
+    .rw-select.rw-select-bordered {
+      width: 14px;
+      position: absolute;
+      right: 4px;
+
+      .rw-btn.rw-btn-select {
+        border: none;
+        width: 14px;
+        height: 14px;
+        transform: translateY(-1px);
+      }
+    }
+  }
+
+
+
+  .rw-select{
+    position: absolute;
+    top: 0px;
+    right: 30px;
+    border-left: 0px;
+    pointer-events: none;
+  }
+
+  .rw-select-bordered{
+    border-left: none;
+  }
+
+  .rw-select-bordered:hover,
+  .rw-select-bordered:active{
+    background: transparent;
+    box-shadow: none;
+  }
+
+  .rw-cell.rw-state-focus.rw-state-selected{
+    color: #333333;
+  }
+
+  .rw-widget-container{
+    border: $calendar-border;
+  }
+
+  .rw-cell {
+    padding: 12px 10px;
+    border-radius: 2px;
+    border: none;
+  }
+
+  .rw-calendar-popup{
+    width: 305px;
+    height: 210px;
+  }
+
+  .rw-calendar-header{
+    height: 40px;
+  }
+
+  .rw-calendar-btn-view{
+    font-size: 16px;
+    color: #3d79d0;
+  }
+
+  .rw-state-focus > .rw-widget-container, .rw-state-focus > .rw-widget-container:hover{
+    box-shadow: none;
+  }
+
+  .rw-btn.rw-btn-select{
+    pointer-events: none;
+  }
+
+  .rw-widget-picker {
+    overflow: unset;
+  }
+
+  .rw-popup {
+    box-shadow: 2px 2px 2px 0 rgba(0, 0, 0, .1);
+    border: 1px solid $calendar-border;
+    background-color: #ffffff;
+    border-radius: 5px;
+    padding: 10px 1px 3px;
+  }
+
+  .rw-popup-transition {
+    &:before,
+    &:after {
+      content: "";
+      position: absolute;
+      display: block;
+      pointer-events: none;
+      border: solid transparent;
+      height: 0;
+      width: 0;
+      bottom: calc(100% - 1px);
+      left: 22px;
+      border-width: 4px;
+      margin: 0 -4px;
+      border-bottom-color: #eceef1;
+      z-index: 1;
+    }
+
+    &:before {
+      border-width: 5px;
+      margin: 0 -5px;
+      border-bottom-color: #c5cbcf;
+    }
+  }
+
+  .rw-i {
+    font-size: 22px;
+  }
+
+  .rw-btn {
+    &:hover,
+    &:focus {
+      outline: none;
+      color: #3d79d0;
+      background-color: transparent;
+    }
+  }
+}

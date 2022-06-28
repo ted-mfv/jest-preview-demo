@@ -1,0 +1,55 @@
+
+ @import "./scss/common/month_picker"; // This using bootstrap 3, we are using bootstrap 4 -> importing `month_picker` should go first
+ @import "~bootstrap/scss/functions";
+ @import "./scss/variables/variables";
+ @import "~bootstrap";
+
+ @import "./scss/nav";
+ @import "./scss/dropdown";
+ @import "./scss/pagination";
+
+ // import common
+ @import "./scss/common/buttons";
+ @import "./scss/common/datepicker";
+ @import "./scss/common/dropdown";
+ @import "./scss/common/errors";
+ @import "./scss/common/form";
+ @import "./scss/common/general";
+ @import "./scss/common/header";
+ @import "./scss/common/icons";
+ @import "./scss/common/input";
+ @import "./scss/common/label";
+ @import "./scss/common/layout";
+ @import "./scss/common/link";
+ @import "./scss/common/modal";
+ @import "./scss/common/pagination";
+ @import "./scss/common/panel";
+ @import "./scss/common/progress";
+ @import "./scss/common/racer";
+ @import "./scss/common/sidebar";
+ @import "./scss/common/table";
+ @import "./scss/common/type-ahead";
+ @import "./scss/common/tag";
+ @import "./scss/common/zendesk_chat";
+ @import "./scss/common/date_range_picker";
+ @import "./scss/common/typography";
+
+ // import pages
+ @import "./scss/pages/group_information";
+ @import "./scss/pages/employee";
+ @import "./scss/pages/retirements";
+ @import "./scss/pages/groups";
+ @import "./scss/pages/join_companies";
+ @import "./scss/pages/bonuses";
+ @import "./scss/pages/anytimrevs";
+ @import "./scss/pages/annual_renewals";
+ @import "./scss/pages/regular_revision";
+ @import "./scss/pages/home";
+ @import "./scss/pages/office";
+ @import "./scss/pages/notifications";
+ @import "./scss/pages/authority.scss";
+ @import "./scss/pages/billing.scss";
+ @import "./scss/pages/childcare.scss";
+ @import "./scss/pages/terms_of_use.scss";
+ @import "./scss/pages/dependence.scss";
+

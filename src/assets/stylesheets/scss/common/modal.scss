@@ -1,0 +1,237 @@
+// for modal
+@import "../../../stylesheets/scss/variables/variables";
+
+.custom-modal {
+  .modal-header {
+    border-bottom: none;
+    background-color: #fafafa;
+    max-height: 48px;
+    padding: 12px 20px;
+    font-size: 16px;
+    font-weight: bold;
+  }
+
+  .modal-body {
+    min-height: 20vh;
+  }
+
+  button,
+  .btn {
+    width: 124px;
+    height: 44px;
+    padding: 0;
+  }
+
+  .modal-footer {
+    border-color: #eff1f4;
+    margin: 0px 20px;
+  }
+
+  .modal-cancel-button {
+    border: 1px solid $border-color;
+  }
+
+  .modal-close-button {
+    cursor: pointer;
+    font-size: 24px;
+  }
+
+  &.modal-normal,
+  &.modal-delete-confirm {
+    .modal-body {
+      @extend .modal-body;
+      min-height: auto;
+    }
+
+    .modal-delete {
+      color: #d0021b;
+
+      &.switch-office {
+        color: #333333;
+      }
+    }
+  }
+
+  &.switch-office-denied {
+    .modal-cancel-button {
+      width: percentage(1);
+      margin-right: 0;
+      max-width: 344px;
+    }
+  }
+
+  .btn {
+    &.modal-save {
+      @extend .btn-primary;
+    }
+  }
+}
+
+.egov-status {
+  .modal-dialog {
+    max-width: 1000px;
+
+    .modal-content {
+      width: fit-content;
+
+      .modal-body {
+        padding: 0 !important;
+
+        hr, br:first-child {
+          display: none;
+        }
+      }
+    }
+  }
+
+  &.h-centered .modal-dialog .modal-content {
+    margin: auto;
+  }
+}
+
+.apply-egov {
+  min-width: 540px;
+
+  .modal-body {
+    padding: 20px;
+  }
+  .modal-header {
+    height: 48px;
+    background-color: #fafafa;
+  }
+
+  p, label, span {
+    font-size: $font-size-base;
+    padding: 0;
+  }
+
+  .col-sm-3 {
+    width: 170px;
+  }
+
+  .list-btn-radios {
+    .form-check-label {
+      margin-left: 8px;
+    }
+  }
+}
+
+svg.modal-close-button {
+  color: #3d79d0 !important;
+  cursor: pointer;
+}
+
+
+.modal-delete-confirm {
+  .modal-body {
+    padding: 16px 20px 16px 20px;
+
+    p {
+      font-size: $font-size-base;
+      margin: 0
+    }
+
+    p + p {
+      margin-top: 8px;
+    }
+  }
+}
+
+.modal-payment-confirm,
+.modal-plan-limit {
+  .content {
+    p,
+    ul {
+      font-size: 14px;
+      line-height: 1.5;
+      margin: 0;
+    }
+
+
+    ul {
+      padding: 0 0 0 30px;
+
+      li {
+        &::marker {
+          margin-right: 0;
+          padding-right: 0;
+        }
+      }
+    }
+
+    .form-check-label {
+      font-size: 14px;
+      line-height: 1.5;
+      letter-spacing: 0.07px;
+      font-weight: bold;
+    }
+
+    .group-info {
+      padding: 15px 0;
+      border-bottom: 1px solid #eff1f4;
+
+      &:first-child {
+        padding-top: 0;
+      }
+    }
+  }
+
+  .modal-ok-button {
+    color: $white;
+    border-radius: 4px;
+    border: solid 1px rgba(0, 0, 0, 0.15);
+    background-image: linear-gradient(to bottom, #3b7de9 1%, #0054ac 100%);
+  }
+
+  .link {
+    letter-spacing: 0.07px;
+    color: #3b7de9;
+  }
+
+  .modal-body {
+    min-height: 0;
+  }
+
+  .modal-dialog {
+    max-width: 540px;
+  }
+
+  &.hide-header {
+    .modal-header {
+      display: none;
+    }
+  }
+
+
+  .title {
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 35px;
+    color: #000000;
+  }
+}
+
+.modal-plan-limit {
+  .modal-body {
+    padding-bottom: 0;
+  }
+
+  .modal-footer {
+    margin: 0;
+    padding: 16px;
+  }
+
+  .btn {
+    min-width: 202px;
+  }
+}
+
+.modal-finish-confirm {
+  .modal-body {
+    min-height: 0;
+  }
+
+  .btn-finish {
+    color: $white;
+  }
+}

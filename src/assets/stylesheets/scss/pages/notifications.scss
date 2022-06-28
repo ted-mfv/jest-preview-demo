@@ -1,0 +1,76 @@
+.notification{
+
+  .form-control{
+    padding: 0px 5px;
+  }
+
+  .react-bootstrap-table{
+    width: 100%;
+    margin-top:10px;
+  }
+
+  .author-input{
+    .form-control{
+      height: 28px;
+    }
+  }
+  .url-column{
+    width: 80px;
+  }
+  .btn-mark-as-read{
+    width: 103px;
+    height: 32px;
+  }
+
+  input[type=checkbox]{
+    width: 16px;
+    height: 16px;
+
+    &:before{
+      display: none;
+    }
+    &:after{
+      display: none;
+    }
+  }
+
+  .table{
+    thead{
+      border-radius: 4px;
+      background-color: #e7f1fd; //variable
+    }
+    td{
+      height: 56px;
+      background-color: white;
+      vertical-align: middle;
+    }
+    th{
+      &.selection-cell-header{
+        width: 32px;
+        height: 44px;
+      }
+      border-bottom: 1px solid #d4d8dd;
+    }
+    td, th{
+      &:first-child{
+        vertical-align: middle;
+        text-align: center;
+      }
+    }
+    td{
+       &:first-child{
+        border-top: none;
+       }
+    }
+    .unread{
+      td{
+        font-weight: bold;
+        span{
+          font-weight: bold;
+        }
+      }
+    }
+  }
+
+}
+

@@ -2,7 +2,7 @@
  @import "./scss/common/month_picker"; // This using bootstrap 3, we are using bootstrap 4 -> importing `month_picker` should go first
  @import "~bootstrap/scss/functions";
  @import "./scss/variables/variables";
- @import "~bootstrap";
+ @import "~bootstrap/scss/bootstrap";
 
  @import "./scss/nav";
  @import "./scss/dropdown";

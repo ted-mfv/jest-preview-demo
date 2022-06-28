@@ -2,6 +2,8 @@ import '@testing-library/jest-dom';
 // eslint-disable-next-line import/no-extraneous-dependencies
 import { jestPreviewConfigure } from 'jest-preview';
 
+import './assets/stylesheets/application.scss';
+ 
 jestPreviewConfigure({
   autoPreview: true,
   sassLoadPaths: []
